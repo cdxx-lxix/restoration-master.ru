@@ -1,26 +1,76 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <q-layout class="bg-grey-1">
+    <SiteHeader />
+    
+    <q-page-container>
+    <q-page>
+      <p>{{$t( 'message' )}}</p>
+    </q-page>
+  </q-page-container>
+  </q-layout>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SiteHeader from './components/SiteHeader.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    SiteHeader
+  },
+  methods: {
+    detectLang() {
+      let lang = localStorage.getItem('lang')
+      if (!lang) {
+        lang = 'ru'
+      }
+      this.$i18n.locale = lang
+    }
+  },
+  beforeMount() {
+   this.detectLang()
+  },
+  data() {
+    return {
+      SiteHeader
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+  
+.GL
+  &__select-GL__menu-link
+    .default-type
+      visibility: hidden
+    &:hover
+      background: #0366d6
+      color: white
+      .q-item__section--side
+        color: white
+      .default-type
+        visibility: visible
+  &__toolbar-link
+    a
+      color: white
+      text-decoration: none
+      &:hover
+        opacity: 0.7
+  &__menu-link:hover
+    background: #0366d6
+    color: white
+  &__menu-link-signed-in,
+  &__menu-link-status
+    &:hover
+      & > div
+        background: white !important
+  &__menu-link-status
+    color: $blue-grey-6
+    &:hover
+      color: $light-blue-9
+  &__toolbar-select.q-field--focused
+    width: 450px !important
+    .q-field__append
+      display: none
+
 </style>

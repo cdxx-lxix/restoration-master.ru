@@ -1,0 +1,9 @@
+{
+  "message": "Теперь русский",
+  "menu": {
+    "start": "Начало",
+    "restorations": "Реставрации",
+    "scrapings": "Циклевка",
+    "contacts": "Контакты"
+  }
+}
