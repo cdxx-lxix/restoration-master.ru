@@ -1,9 +1,24 @@
 {
-  "message": "Теперь русский",
   "menu": {
     "start": "Начало",
     "restorations": "Реставрации",
     "scrapings": "Циклевка",
-    "contacts": "Контакты"
+    "contacts": "Контакты",
+    "language": "Change to:⠀",
+    "tite": "Restoration Master",
+    "telephone": "8-910-910-10-10"
+  },
+  "about": {
+    "title": "Мастер реставраций",
+    "name": "Ян Востров",
+    "aboutme": "(RU)Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "advantages": {
+    "card1_1": "Bla bla 1",
+    "card1_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "card2_1": "Bla bla 2",
+    "card2_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "card3_1": "Bla bla 3",
+    "card3_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }
 }

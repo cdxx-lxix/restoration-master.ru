@@ -1,21 +1,35 @@
 <template>
   <q-layout class="bg-grey-1">
-    <SiteHeader />
-    
+    <SiteHeader v-if="$windowWidth >= 1080" />
+    <MobileHeader v-else />
     <q-page-container>
-    <q-page>
-      <p>{{$t( 'message' )}}</p>
-    </q-page>
-  </q-page-container>
+      <q-page class="flex flex-center">
+        <SiteAbout />
+        <SiteRestorations />
+        <SiteAdvantages />
+        <SiteScrapings />
+      </q-page>
+    </q-page-container>
   </q-layout>
 </template>
 
 <script>
 import SiteHeader from './components/SiteHeader.vue';
+import SiteAbout from './components/SiteAbout.vue';
+import SiteRestorations from './components/SiteRestorations.vue';
+import SiteAdvantages from './components/SiteAdvantages.vue';
+import SiteScrapings from './components/SiteScrapings.vue';
+import MobileHeader from "./components/MobileHeader.vue"
+
 
 export default {
   components: {
-    SiteHeader
+    SiteHeader,
+    MobileHeader,
+    SiteAbout,
+    SiteRestorations,
+    SiteAdvantages,
+    SiteScrapings
   },
   methods: {
     detectLang() {
@@ -31,7 +45,12 @@ export default {
   },
   data() {
     return {
-      SiteHeader
+      SiteHeader,
+      MobileHeader,
+      SiteAbout,
+      SiteRestorations,
+      SiteAdvantages,
+      SiteScrapings
     }
   }
 }

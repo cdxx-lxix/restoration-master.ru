@@ -1,10 +1,10 @@
 <template>
-  <q-header elevated class="text-white" style="background: #24292e" height-hint="61.59">
+  <q-header elevated class="text-white bg-primary" height-hint="61.59">
     <q-toolbar class="q-py-sm q-px-md">
 
       <!-- START: Logo and Name. Left side. -->
       <q-btn round dense flat :ripple="{ center: true }" size="19px" class="q-mr-sm" no-caps ><img :src="logo" ></q-btn>
-      <q-toolbar-title>Restoration Master</q-toolbar-title>
+      <q-toolbar-title>{{ $t("menu.title") }}</q-toolbar-title>
       <!-- END: Logo and Name. Left side. -->
 
       <!-- START: Menu. Center -->
