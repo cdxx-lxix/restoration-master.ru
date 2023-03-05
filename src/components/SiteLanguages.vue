@@ -1,5 +1,5 @@
 <template>
-    <q-btn dense flat no-wrap><a class="GL__toolbar-link text-white text-body2 text-weight-bold" :href="'tel:'+phone">{{ phone }}</a></q-btn>
+    <q-btn dense flat no-wrap><a class="GL__toolbar-link text-white text-body2 text-weight-bold" :href="'tel:'+this.$phoneNumber">{{ this.$phoneNumber }}</a></q-btn>
     <div class="q-pl-sm q-gutter-sm row items-center no-wrap">
         <q-btn dense flat no-wrap>
           <q-avatar rounded size="20px">
@@ -29,13 +29,11 @@
 <script>
 import ru_lang from '../assets/ru_lang.png'
 import en_lang from '../assets/uk_lang.png'
-let phone = "8-910-910-10-10"
   export default {
     data() {
       return {
         ru_lang,
-        en_lang,
-        phone
+        en_lang
       }
     },
     methods: {

@@ -5,5 +5,15 @@ import { Quasar } from 'quasar'
 import quasarUserOptions from './quasar-user-options'
 import { VueWindowSizePlugin } from 'vue-window-size/plugin';
 
-createApp(App).use(Quasar, quasarUserOptions).use(i18n).use(VueWindowSizePlugin).mount('#app')
+const app = createApp(App);
+
+// List of global variables
+app.config.globalProperties.$phoneNumber = "89109101010";
+app.config.globalProperties.$menuLinkOne = "#start";
+app.config.globalProperties.$menuLinkTwo = "#gallery";
+app.config.globalProperties.$menuLinkThree = "";
+app.config.globalProperties.$menuLinkFour = "";
+
+// App creation
+app.use(Quasar, quasarUserOptions).use(i18n).use(VueWindowSizePlugin).mount('#app')
 

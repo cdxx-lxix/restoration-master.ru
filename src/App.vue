@@ -1,13 +1,13 @@
 <template>
-  <q-layout class="bg-grey-1">
+  <q-layout class="BG__gradient">
     <SiteHeader v-if="$windowWidth >= 1080" />
     <MobileHeader v-else />
     <q-page-container>
       <q-page class="flex flex-center">
         <SiteAbout />
-        <SiteRestorations />
+        <UniversalGallery />
         <SiteAdvantages />
-        <SiteScrapings />
+        <SiteYoutube />
       </q-page>
     </q-page-container>
   </q-layout>
@@ -16,10 +16,10 @@
 <script>
 import SiteHeader from './components/SiteHeader.vue';
 import SiteAbout from './components/SiteAbout.vue';
-import SiteRestorations from './components/SiteRestorations.vue';
 import SiteAdvantages from './components/SiteAdvantages.vue';
-import SiteScrapings from './components/SiteScrapings.vue';
-import MobileHeader from "./components/MobileHeader.vue"
+import MobileHeader from "./components/MobileHeader.vue";
+import UniversalGallery from './components/UniversalGallery.vue';
+import SiteYoutube from './components/SiteYoutube.vue';
 
 
 export default {
@@ -27,9 +27,9 @@ export default {
     SiteHeader,
     MobileHeader,
     SiteAbout,
-    SiteRestorations,
     SiteAdvantages,
-    SiteScrapings
+    UniversalGallery,
+    SiteYoutube
   },
   methods: {
     detectLang() {
@@ -48,9 +48,9 @@ export default {
       SiteHeader,
       MobileHeader,
       SiteAbout,
-      SiteRestorations,
       SiteAdvantages,
-      SiteScrapings
+      UniversalGallery,
+      SiteYoutube
     }
   }
 }
@@ -91,5 +91,12 @@ export default {
     width: 450px !important
     .q-field__append
       display: none
+.BG
+  &__gradient
+    /* background: linear-gradient(60deg, #E2E4E8 0%, #A4AAB6 100%) */
+    background: #757F9A
+    background: -webkit-linear-gradient(to top, #D7DDE8, #757F9A)
+    background: linear-gradient(to top, #D7DDE8, #757F9A)
+
 
 </style>

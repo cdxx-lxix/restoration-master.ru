@@ -1,5 +1,5 @@
 <template>
-  <q-header elevated class="text-white bg-primary" height-hint="61.59">
+  <q-header elevated class="text-white bg-primary" height-hint="61.59" id="start">
     <q-toolbar class="q-py-sm q-px-md">
 
       <!-- START: Logo and Name. Left side. -->
@@ -9,16 +9,16 @@
 
       <!-- START: Menu. Center -->
       <div v-if="$q.screen.gt.sm" class="GL__toolbar-link q-ml-xs q-gutter-md text-body2 text-weight-bold row items-center no-wrap">
-        <a href="javascript:void(0)" class="text-white">
+        <a :href="$menuLinkOne" class="text-white">
           {{ $t("menu.start") }}
         </a>
-        <a href="javascript:void(0)" class="text-white">
+        <a :href="$menuLinkTwo" class="text-white">
           {{ $t("menu.restorations") }}
         </a>
-        <a href="javascript:void(0)" class="text-white">
+        <a :href="$menuLinkThree" class="text-white">
           {{ $t("menu.scrapings") }}
         </a>
-        <a href="javascript:void(0)" class="text-white">
+        <a :href="$menuLinkFour" class="text-white">
           {{ $t("menu.contacts") }}
         </a>
       </div>

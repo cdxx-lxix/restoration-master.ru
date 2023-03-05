@@ -5,8 +5,10 @@
     "scrapings": "Циклевка",
     "contacts": "Контакты",
     "language": "Change to:⠀",
-    "tite": "Restoration Master",
-    "telephone": "8-910-910-10-10"
+    "title": "Restoration Master",
+    "telephone": "8-910-910-10-10",
+    "callme": "Позвонить",
+    "compare": "Сравнить"
   },
   "about": {
     "title": "Мастер реставраций",

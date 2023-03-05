@@ -1,5 +1,5 @@
 <template>
-  <q-header elevated class="text-white bg-primary" height-hint="61.59">
+  <q-header elevated class="text-white bg-primary" height-hint="61.59" id="start" style="position: sticky">
     <q-toolbar class="q-py-sm q-px-md">
 
       <!-- START: Name. Left side. -->
@@ -16,6 +16,13 @@
         <!-- LOGO SECTION -->
         <q-item round dense flat :ripple="{ center: true }" size="15px" class="q-mr-sm" no-caps ><img :src="logo"></q-item>
         <q-separator />
+        <!-- PHONE SECTION -->
+        <q-item clickable v-ripple>
+          <q-item-section class="items-center">
+            <a class="row text-white text-body2 text-weight-bold" :href="'tel:'+this.$phoneNumber">{{ $t("menu.callme") }}</a>
+          </q-item-section>
+        </q-item>
+        <q-separator />
         <!-- LANGUAGE SECTION -->
         <q-item clickable v-ripple @click="this.$i18n.locale = 'ru'; rememberLang()" v-show="this.$i18n.locale == 'en'">
             <q-item-section class="items-center">
@@ -31,22 +38,22 @@
         <!-- MENU SECTION -->
         <q-item clickable v-ripple>
           <q-item-section class="items-center">
-            <div href="javascript:void(0)" class="text-white">{{ $t("menu.start") }}</div>
+            <div  @click="window.location.href='menuLinkOne'" class="text-white">{{ $t("menu.start") }}</div>
           </q-item-section>
         </q-item>
         <q-item clickable v-ripple>
           <q-item-section class="items-center">
-            <div href="javascript:void(0)" class="text-white">{{ $t("menu.restorations") }}</div>
+            <div :href="$menuLinkTwo" class="text-white">{{ $t("menu.restorations") }}</div>
           </q-item-section>
         </q-item>
         <q-item clickable v-ripple>
           <q-item-section class="items-center">
-            <div href="javascript:void(0)" class="text-white">{{ $t("menu.scrapings") }}</div>
+            <div :href="$menuLinkThree" class="text-white">{{ $t("menu.scrapings") }}</div>
           </q-item-section>
         </q-item>
         <q-item clickable v-ripple>
           <q-item-section class="items-center">
-            <div href="javascript:void(0)" class="text-white">{{ $t("menu.contacts") }}</div>
+            <div :href="$menuLinkFour" class="text-white">{{ $t("menu.contacts") }}</div>
           </q-item-section>
         </q-item>
       </q-list>
