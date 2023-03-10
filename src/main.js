@@ -13,6 +13,7 @@ app.config.globalProperties.$menuLinkOne = "#start";
 app.config.globalProperties.$menuLinkTwo = "#gallery";
 app.config.globalProperties.$menuLinkThree = "";
 app.config.globalProperties.$menuLinkFour = "";
+app.config.globalProperties.$footerDev = "https://mladich.com";
 
 // App creation
 app.use(Quasar, quasarUserOptions).use(i18n).use(VueWindowSizePlugin).mount('#app')

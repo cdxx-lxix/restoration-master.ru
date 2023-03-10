@@ -8,7 +8,8 @@
     "title": "Restoration Master",
     "telephone": "8-910-910-10-10",
     "callme": "Позвонить",
-    "compare": "Сравнить"
+    "compare": "Сравнить",
+    "developer": "Связь с разработчиком"
   },
   "about": {
     "title": "Мастер реставраций",
@@ -22,5 +23,9 @@
     "card2_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "card3_1": "Bla bla 3",
     "card3_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "gallery": {
+    "before": "до",
+    "after": "после"
   }
 }

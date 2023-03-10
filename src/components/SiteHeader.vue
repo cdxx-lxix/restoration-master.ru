@@ -1,5 +1,5 @@
 <template>
-  <q-header elevated class="text-white bg-primary" height-hint="61.59" id="start">
+  <q-header elevated class="text-white bg-primary" height-hint="61.59" id="header">
     <q-toolbar class="q-py-sm q-px-md">
 
       <!-- START: Logo and Name. Left side. -->

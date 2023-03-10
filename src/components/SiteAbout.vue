@@ -1,5 +1,5 @@
 <template>
-    <div class="fit row wrap justify-center items-center content-center" style="min-width: 80%; max-width: 80%; margin: auto; padding: 1em;">
+    <div class="fit row wrap justify-center items-center content-center" :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'">
         <div class="col-12 col-md-auto">
             <q-card class="bg-grey-9" dark flat bordered>
                 <q-card-section horizontal>

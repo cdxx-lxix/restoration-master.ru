@@ -14,6 +14,7 @@
     "quasar": "^2.0.0",
     "vue": "^3.2.13",
     "vue-i18n": "^9.1.0",
+    "vue-image-compare2": "^1.0.0",
     "vue-window-size": "^2.0.0"
   },
   "devDependencies": {
@@ -27,7 +28,7 @@
     "eslint-plugin-vue": "^8.0.3",
     "sass": "1.32.12",
     "sass-loader": "^12.0.0",
-    "vue-cli-plugin-i18n": "~2.3.1",
+    "vue-cli-plugin-i18n": "^2.3.1",
     "vue-cli-plugin-quasar": "~5.0.1"
   }
 }

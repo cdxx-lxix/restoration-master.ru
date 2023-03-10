@@ -1,7 +1,7 @@
 <template>
-    <div class="row full-width wrap justify-center items-center" :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'">
+    <div class="row full-width wrap justify-center items-center CNT__all">
             <q-card class="bg-grey-9" dark flat bordered>
-                <q-card-section horizontal>
+                <q-card-section vertical>
                     <q-card-section class="col-4">
                         <q-card-section>
                         <div class="text-h6">{{ $t("advantages.card1_1") }}</div>

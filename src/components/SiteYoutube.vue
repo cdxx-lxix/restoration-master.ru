@@ -1,7 +1,6 @@
 <template>
     {{ getLastVideo() }}
-    <div class="q-pa-md row wrap justify-center items-center content-center"
-        style="min-width: 80%; max-width: 80%; margin: auto; padding: 1em;">
+    <div class="q-pa-md row wrap justify-center items-center content-center" :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'">
         <div class="q-video" style="width: 100%;">
             <iframe style="aspect-ratio: 16/9;" :src="lastVideoUrl" frameborder="0" allowfullscreen />
         </div>

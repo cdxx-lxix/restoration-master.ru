@@ -6,10 +6,16 @@
       <q-page class="flex flex-center">
         <SiteAbout />
         <UniversalGallery />
-        <SiteAdvantages />
+        <SiteAdvantages v-if="$windowWidth >= 640" />
+          <MobileAdvantages v-else />
         <SiteYoutube />
+        <SiteContacts />
+        <q-page-sticky position="bottom-right" :offset="[18, 18]">
+            <q-btn fab icon="keyboard_arrow_up" color="accent" @click="backToTop" id="toTopButton" :style="scrollDetector()"/>
+        </q-page-sticky>
       </q-page>
     </q-page-container>
+    <SiteFooter />
   </q-layout>
 </template>
 
@@ -20,6 +26,9 @@ import SiteAdvantages from './components/SiteAdvantages.vue';
 import MobileHeader from "./components/MobileHeader.vue";
 import UniversalGallery from './components/UniversalGallery.vue';
 import SiteYoutube from './components/SiteYoutube.vue';
+import MobileAdvantages from './components/MobileAdvantages.vue';
+import SiteFooter from './components/SiteFooter.vue';
+import SiteContacts from './components/SiteContacts.vue';
 
 
 export default {
@@ -29,15 +38,29 @@ export default {
     SiteAbout,
     SiteAdvantages,
     UniversalGallery,
-    SiteYoutube
+    SiteYoutube,
+    MobileAdvantages,
+    SiteFooter,
+    SiteContacts
   },
   methods: {
     detectLang() {
-      let lang = localStorage.getItem('lang')
+      let lang = localStorage.getItem('lang');
       if (!lang) {
         lang = 'ru'
       }
-      this.$i18n.locale = lang
+      this.$i18n.locale = lang;
+    },
+    backToTop() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    },
+    scrollDetector() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        return ''
+      } else {
+        return 'display: none;'
+      }
     }
   },
   beforeMount() {
@@ -50,53 +73,22 @@ export default {
       SiteAbout,
       SiteAdvantages,
       UniversalGallery,
-      SiteYoutube
+      SiteYoutube,
+      MobileAdvantages,
+      SiteFooter,
+      SiteContacts
+    }
+  },
+  computed: {
+    scaler() {
+      const zoom = Number.parseFloat(this.mutableZoom.toFixed(2))
+      return {
+        width: `${this.width}px`,
+        height: this.full ? `${this.height}px` : 'auto',
+        transform: `scale(${zoom}) translate(${this.shiftX}px, ${this.shiftY}px)`,
+        }
     }
   }
 }
 </script>
 
-<style lang="sass">
-  
-.GL
-  &__select-GL__menu-link
-    .default-type
-      visibility: hidden
-    &:hover
-      background: #0366d6
-      color: white
-      .q-item__section--side
-        color: white
-      .default-type
-        visibility: visible
-  &__toolbar-link
-    a
-      color: white
-      text-decoration: none
-      &:hover
-        opacity: 0.7
-  &__menu-link:hover
-    background: #0366d6
-    color: white
-  &__menu-link-signed-in,
-  &__menu-link-status
-    &:hover
-      & > div
-        background: white !important
-  &__menu-link-status
-    color: $blue-grey-6
-    &:hover
-      color: $light-blue-9
-  &__toolbar-select.q-field--focused
-    width: 450px !important
-    .q-field__append
-      display: none
-.BG
-  &__gradient
-    /* background: linear-gradient(60deg, #E2E4E8 0%, #A4AAB6 100%) */
-    background: #757F9A
-    background: -webkit-linear-gradient(to top, #D7DDE8, #757F9A)
-    background: linear-gradient(to top, #D7DDE8, #757F9A)
-
-
-</style>
