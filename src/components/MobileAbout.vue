@@ -11,9 +11,9 @@
                         </q-item-label>
                     </q-item-section>
                 </q-item>
-                <q-card-section horizontal>
-                    <q-img class="col-5" :src="masterPhoto" />
-                    <q-card-section class="col-7">
+                <q-card-section vertical>
+                    <q-img :src="masterPhoto" />
+                    <q-card-section>
                         <q-card-section>
                             <div class="text-h6">{{ $t("about.name") }}</div>
                             <div class="text-subtitle2">{{ $t("about.title") }}</div>

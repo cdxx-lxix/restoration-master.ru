@@ -4,12 +4,14 @@
     <MobileHeader v-else />
     <q-page-container>
       <q-page class="flex flex-center">
-        <SiteAbout />
+        <SiteAbout v-if="$windowWidth >= 680" />
+        <MobileAbout v-else />
         <UniversalGallery />
         <SiteAdvantages v-if="$windowWidth >= 640" />
           <MobileAdvantages v-else />
         <SiteYoutube />
-        <SiteContacts />
+        <SiteContacts v-if="$windowWidth >= 680" />
+        <MobileContacts v-else />
         <q-page-sticky position="bottom-right" :offset="[18, 18]">
             <q-btn fab icon="keyboard_arrow_up" color="accent" @click="backToTop" id="toTopButton" :style="scrollDetector()"/>
         </q-page-sticky>
@@ -29,6 +31,8 @@ import SiteYoutube from './components/SiteYoutube.vue';
 import MobileAdvantages from './components/MobileAdvantages.vue';
 import SiteFooter from './components/SiteFooter.vue';
 import SiteContacts from './components/SiteContacts.vue';
+import MobileContacts from './components/MobileContacts.vue';
+import MobileAbout from './components/MobileAbout.vue'
 
 
 export default {
@@ -41,7 +45,9 @@ export default {
     SiteYoutube,
     MobileAdvantages,
     SiteFooter,
-    SiteContacts
+    SiteContacts,
+    MobileContacts,
+    MobileAbout
   },
   methods: {
     detectLang() {
@@ -76,7 +82,9 @@ export default {
       SiteYoutube,
       MobileAdvantages,
       SiteFooter,
-      SiteContacts
+      SiteContacts,
+      MobileContacts,
+      MobileAbout
     }
   },
   computed: {

@@ -1,8 +1,8 @@
 {
   "menu": {
     "start": "Start",
-    "restorations": "Restorations",
-    "scrapings": "Scrapings",
+    "restorations": "Gallery",
+    "scrapings": "My channel",
     "contacts": "Contacts",
     "language": "Сменить на:⠀",
     "title": "Restoration Master",
@@ -12,6 +12,8 @@
     "developer": "Contact with developer"
   },
   "about": {
+    "header": "About me",
+    "subtitle": "My experience, types of works and a bit about myself",
     "title": "Restoration Master",
     "name": "Yan Vostrov",
     "aboutme": "(EN)Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -22,10 +24,23 @@
     "card2_1": "Bla bla 2",
     "card2_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "card3_1": "Bla bla 3",
-    "card3_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "card3_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "header": "Advantages",
+    "subtitle": "What you'll get for hiring me: "
+  },
+  "youtube": {
+    "header": "My YouTube channel",
+    "subtitle": "Pure ASMR"
   },
   "gallery": {
+    "header": "Галлерея",
+    "subtitle": "Лучше один раз увидеть, чем 100 услышать",
     "before": "before",
     "after": "after"
+  },
+  "contacts": {
+    "header": "Contacts",
+    "subtitle": "Reach out to me with any of the provided options that is the best for you",
+    "content": "I work in Moscow and Moscow Area but for a special orders we can discuss individual solution. Personally located in Southern AD."
   }
 }

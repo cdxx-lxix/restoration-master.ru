@@ -9,10 +9,10 @@ const app = createApp(App);
 
 // List of global variables
 app.config.globalProperties.$phoneNumber = "89109101010";
-app.config.globalProperties.$menuLinkOne = "#start";
+app.config.globalProperties.$menuLinkOne = "#header";
 app.config.globalProperties.$menuLinkTwo = "#gallery";
-app.config.globalProperties.$menuLinkThree = "";
-app.config.globalProperties.$menuLinkFour = "";
+app.config.globalProperties.$menuLinkThree = "#youtube";
+app.config.globalProperties.$menuLinkFour = "#contacts";
 app.config.globalProperties.$footerDev = "https://mladich.com";
 
 // App creation

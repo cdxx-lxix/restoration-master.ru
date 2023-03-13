@@ -1,10 +1,25 @@
 <template>
     {{ getLastVideo() }}
-    <div class="q-pa-md row wrap justify-center items-center content-center" :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'">
+    <div class="row wrap justify-center items-center content-center"
+        :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="youtube">
+        <q-card class="bg-grey-9 full-width" dark flat bordered>
+            <q-item>
+                <q-item-section>
+                    <q-item-label>{{ $t('youtube.header') }}</q-item-label>
+                    <q-item-label caption class="text-white">
+                        {{ $t('youtube.subtitle') }}
+                    </q-item-label>
+                </q-item-section>
+            </q-item>
+            <q-video :ratio="16 / 9" :src="lastVideoUrl" frameborder="0" allowfullscreen></q-video>
+        </q-card>
+    </div>
+    <!-- <div class="q-pa-md row wrap justify-center items-center content-center"
+        :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="youtube">
         <div class="q-video" style="width: 100%;">
             <iframe style="aspect-ratio: 16/9;" :src="lastVideoUrl" frameborder="0" allowfullscreen />
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script>
@@ -18,12 +33,12 @@ export default {
             let reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
             try {
                 fetch(reqURL).then(response => response.json()).then(result => {
-                this.channelUrl = result.feed.link;
-                let guid = result.items[0].guid;
-                guid = guid.toString().slice(9)
-                this.lastVideoUrl = "https://www.youtube.com/embed/" + guid
-            })
-            } catch(error) {
+                    this.channelUrl = result.feed.link;
+                    let guid = result.items[0].guid;
+                    guid = guid.toString().slice(9)
+                    this.lastVideoUrl = "https://www.youtube.com/embed/" + guid
+                })
+            } catch (error) {
                 console.log(error)
                 this.channelUrl = "";
                 this.lastVideoUrl = "";
