@@ -13,18 +13,10 @@
                 </q-item>
                 <q-card-section vertical>
                     <q-img :src="masterPhoto" />
-                    <q-card-section>
-                        <q-card-section>
-                            <div class="text-h6">{{ $t("about.name") }}</div>
-                            <div class="text-subtitle2">{{ $t("about.title") }}</div>
-                        </q-card-section>
-
-                        <q-separator dark inset />
-
-                        <q-card-section>
-                            {{ $t("about.aboutme") }}
-                        </q-card-section>
-                    </q-card-section>
+                    <div class="text-h6">{{ $t("about.name") }}</div>
+                    <p class="text-subtitle2">{{ $t("about.title") }}</p>
+                    <q-separator dark style="margin-bottom: 0.7em;" />
+                    <p class="text-body2">{{ $t("about.aboutme") }}</p>
                 </q-card-section>
             </q-card>
         </div>
