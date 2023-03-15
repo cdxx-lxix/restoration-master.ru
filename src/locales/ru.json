@@ -26,17 +26,21 @@
     "card3_1": "Bla bla 3",
     "card3_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "header": "Преимущества",
-    "subtitle": "Что Вы получите выбрав меня: "
+    "subtitle": "Что Вы получите выбрав меня: ",
+    "button": "Сравнить",
+    "compare_title": "Сравнение"
   },
   "youtube": {
     "header": "Мой YouTube канал",
-    "subtitle": "Чистый ASMR"
+    "subtitle": "Чистый ASMR",
+    "button": "Подписаться"
   },
   "gallery": {
     "header": "Галлерея",
     "subtitle": "Лучше один раз увидеть, чем 100 услышать",
     "before": "до",
-    "after": "после"
+    "after": "после",
+    "button": "Полноэкранный"
   },
   "contacts": {
     "header": "Контакты",

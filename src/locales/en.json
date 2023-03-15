@@ -26,17 +26,21 @@
     "card3_1": "Bla bla 3",
     "card3_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "header": "Advantages",
-    "subtitle": "What you'll get for hiring me: "
+    "subtitle": "What you'll get for hiring me: ",
+    "button": "Compare",
+    "compare_title": "Comparisson"
   },
   "youtube": {
     "header": "My YouTube channel",
-    "subtitle": "Pure ASMR"
+    "subtitle": "Pure ASMR",
+    "button": "Subscribe"
   },
   "gallery": {
-    "header": "Галлерея",
-    "subtitle": "Лучше один раз увидеть, чем 100 услышать",
+    "header": "Gallery",
+    "subtitle": "A picture is worth a thousand words",
     "before": "before",
-    "after": "after"
+    "after": "after",
+    "button": "Fullscreen"
   },
   "contacts": {
     "header": "Contacts",

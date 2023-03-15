@@ -2,24 +2,22 @@
     {{ getLastVideo() }}
     <div class="row wrap justify-center items-center content-center"
         :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="youtube">
-        <q-card class="bg-grey-9 full-width" dark flat bordered>
-            <q-item>
+        <q-card class="bg-secondary full-width" dark flat>
+            <q-item class="BG__cardTop">
                 <q-item-section>
                     <q-item-label>{{ $t('youtube.header') }}</q-item-label>
                     <q-item-label caption class="text-white">
                         {{ $t('youtube.subtitle') }}
                     </q-item-label>
                 </q-item-section>
+                <q-card-actions>
+                    <q-btn color="red" :label="$t('youtube.button')" :href="channelUrl" />
+                </q-card-actions>
             </q-item>
-            <q-video :ratio="16 / 9" :src="lastVideoUrl" frameborder="0" allowfullscreen></q-video>
+            <q-separator dark />
+            <q-video :ratio="16 / 9" :src="lastVideoUrl" frameborder="0" allowfullscreen class="cardFit"/>
         </q-card>
     </div>
-    <!-- <div class="q-pa-md row wrap justify-center items-center content-center"
-        :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="youtube">
-        <div class="q-video" style="width: 100%;">
-            <iframe style="aspect-ratio: 16/9;" :src="lastVideoUrl" frameborder="0" allowfullscreen />
-        </div>
-    </div> -->
 </template>
 
 <script>
@@ -28,6 +26,11 @@ let lastVideoUrl;
 export default {
     methods: {
         getLastVideo() {
+            // cid - channel ID
+            // channelURL - generated feed url 
+            // reqURL - url to make an rss request to avoid usage of youtubes paid api
+            // as a result I got json with all of the nessesary data 
+            // catch block in case of a failure returns specified channel url and video
             const cid = "UCQP4POsDskpkSK9OANY1zAA";
             let channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`)
             let reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
