@@ -1,4 +1,4 @@
-# Restorationmaster.ru
+# Restoration-master.ru
 
 ## Project setup
 ```
