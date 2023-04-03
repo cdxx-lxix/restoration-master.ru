@@ -27,8 +27,15 @@
     "card3_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "header": "Преимущества",
     "subtitle": "Что Вы получите выбрав меня: ",
-    "button": "Сравнить",
-    "compare_title": "Сравнение"
+    "compare": "Сравнить",
+    "compare_title": "Сравнение",
+    "advant": "Преимущества"
+  },
+  "compare": {
+    "card1": "До",
+    "card2": "В процессе",
+    "card3": "После",
+    "novideo": "Ваш браузер не поддеживает HTML5 видео"
   },
   "youtube": {
     "header": "Мой YouTube канал",

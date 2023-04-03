@@ -1,175 +1,66 @@
 <template>
-    <!-- Desktop and tablets -->
-    <template v-if="$windowWidth >= 680">
-        <div class="row full-width wrap justify-center items-center"
-            :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'">
-            <q-card class="bg-secondary" dark flat>
-                <q-item class="BG__cardTop">
-                    <q-item-section>
-                        <q-item-label>{{ $t('advantages.header') }}</q-item-label>
-                        <q-item-label caption class="text-white">
-                            {{ $t('advantages.subtitle') }}
-                        </q-item-label>
-                    </q-item-section>
-                    <q-card-actions>
-                        <q-btn color="grey-9" icon="compare" :label="$t('advantages.button')" @click="compare = true" />
-                        <q-dialog v-model="compare">
-                            <q-card class="col-10 col-md-auto" :ratio="16 / 9">
-                                <image-compare :ratio="16 / 9" :before="slide1" :after="slide2"
-                                    :labels="{ after: this.$t('gallery.after'), before: this.$t('gallery.before') }" />
-                            </q-card>
-                        </q-dialog>
-                    </q-card-actions>
-                </q-item>
-                <q-separator dark />
-                    <q-card-section horizontal class="cardFit">
-                        <q-card-section class="col-4">
-                            <q-item>
-                                <q-item-label class="text-h6 title-aligned">{{ $t("advantages.card1_1") }}</q-item-label>
-                                <q-space />
-                                <q-card-actions><q-btn unelevated flat icon="home" class="btn-image" /></q-card-actions>
-                            </q-item>
-                            <q-separator dark inset />
-                            <q-card-section>
-                                {{ $t("advantages.card1_2") }}
-                            </q-card-section>
-                        </q-card-section>
-
-                        <q-separator vertical dark inset />
-
-                        <q-card-section class="col-4">
-                            <q-item>
-                                <q-item-label class="text-h6 title-aligned">{{ $t("advantages.card2_1") }}</q-item-label>
-                                <q-space />
-                                <q-card-actions><q-btn unelevated flat icon="thumb_up" class="btn-image" /></q-card-actions>
-                            </q-item>
-                            <q-separator dark inset />
-                            <q-card-section>
-                                {{ $t("advantages.card2_2") }}
-                            </q-card-section>
-                        </q-card-section>
-
-                        <q-separator vertical dark inset />
-
-                        <q-card-section class="col-4">
-                            <q-item>
-                                <q-item-label class="text-h6 title-aligned">{{ $t("advantages.card3_1") }}</q-item-label>
-                                <q-space />
-                                <q-card-actions><q-btn unelevated flat icon="schedule" class="btn-image" /></q-card-actions>
-                            </q-item>
-                            <q-separator dark inset />
-                            <q-card-section>
-                                {{ $t("advantages.card3_2") }}
-                            </q-card-section>
-                        </q-card-section>
-                    </q-card-section>
-            </q-card>
-        </div>
-    </template>
-    <!-- Mobile -->
-    <template v-else>
-        <div class="row full-width wrap justify-center items-center"
-            :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'">
-            <q-card class="bg-secondary" dark flat>
-                <q-item class="BG__cardTop">
-                    <q-item-section>
-                        <q-item-label>{{ $t('advantages.header') }}</q-item-label>
-                        <q-item-label caption class="text-white">
-                            {{ $t('advantages.subtitle') }}
-                        </q-item-label>
-                    </q-item-section>
-                    <q-card-actions>
-                        <q-btn color="grey-9" icon="compare" :label="$t('advantages.button')" @click="compare = true" />
-                        <q-dialog v-model="compare">
-                            <q-card class="col-10 col-md-auto" :ratio="16 / 9">
-                                <image-compare :ratio="16 / 9" :before="slide1" :after="slide2"
-                                    :labels="{ after: this.$t('gallery.after'), before: this.$t('gallery.before') }" />
-                            </q-card>
-                        </q-dialog>
-                    </q-card-actions>
-                </q-item>
-                <q-separator dark />
-                <q-card-section vertical>
-                    <q-card-section class="col-4 framed-card">
-                        <q-item>
-                            <q-item-label class="text-h6 title-aligned">{{ $t("advantages.card1_1") }}</q-item-label>
-                            <q-space />
-                            <q-card-actions><q-btn unelevated flat icon="home" class="btn-image" /></q-card-actions>
-                        </q-item>
-                        <q-separator dark inset />
-                        <q-card-section>
-                            {{ $t("advantages.card1_2") }}
-                        </q-card-section>
-                    </q-card-section>
-
-                    <q-card-section class="col-4 framed-card">
-                        <q-item>
-                            <q-item-label class="text-h6 title-aligned">{{ $t("advantages.card2_1") }}</q-item-label>
-                            <q-space />
-                            <q-card-actions><q-btn unelevated flat icon="thumb_up" class="btn-image" /></q-card-actions>
-                        </q-item>
-                        <q-separator dark inset />
-                        <q-card-section>
-                            {{ $t("advantages.card2_2") }}
-                        </q-card-section>
-                    </q-card-section>
-
-                    <q-card-section class="col-4 framed-card">
-                        <q-item>
-                            <q-item-label class="text-h6 title-aligned">{{ $t("advantages.card3_1") }}</q-item-label>
-                            <q-space />
-                            <q-card-actions><q-btn unelevated flat icon="schedule" class="btn-image" /></q-card-actions>
-                        </q-item>
-                        <q-separator dark inset />
-                        <q-card-section>
-                            {{ $t("advantages.card3_2") }}
-                        </q-card-section>
-                    </q-card-section>
-                </q-card-section>
-            </q-card>
-        </div>
-    </template>
+    <div class="row full-width wrap justify-center items-center" :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'">
+        <q-card class="bg-secondary" dark flat style="width: 100%;">
+            <q-item class="BG__cardTop">
+                <q-item-section>
+                    <q-item-label>{{ $t(settings.title) }}</q-item-label>
+                    <q-item-label caption class="text-white">
+                        {{ $t('advantages.subtitle') }}
+                    </q-item-label>
+                </q-item-section>
+                <q-card-actions>
+                    <q-btn color="grey-9" 
+                        :icon="settings.icon"
+                        :label="$t(settings.label)"
+                        @click="toggleComponent" />
+                </q-card-actions>
+            </q-item>
+            <q-separator dark />
+            <component :is="currentComponent"></component>
+        </q-card>
+    </div>
 </template>
 
 <script>
-import imageCompare from 'vue-image-compare2'
-import slide1 from '../assets/slides/restore_slide_1.jpg'
-import slide2 from '../assets/slides/restore_slide_2.jpg'
+
+import AdvantagesTable from './AdvantagesTable.vue';
+import AdvantagesCompare from './AdvantagesCompare.vue';
 export default {
+    components: {
+        AdvantagesTable,
+        AdvantagesCompare
+    },
     data() {
         return {
-            compare: false,
-            slide1,
-            slide2,
+            currentComponent: AdvantagesTable,
+            settings: {
+                icon: 'compare',
+                label: 'advantages.compare',
+                title: 'advantages.header'
+            }
         }
     },
-    components: {
-        imageCompare
+    methods: {
+        toggleComponent() {
+            this.currentComponent = this.currentComponent === 'AdvantagesTable' ? 'AdvantagesCompare' : 'AdvantagesTable';
+            this.settingsSwitcher()
+        },
+        settingsSwitcher() {
+            if (this.currentComponent === 'AdvantagesTable') {
+                this.settings = {
+                    icon: 'compare',
+                    label: 'advantages.compare',
+                    title: 'advantages.header'
+                } 
+            } else {
+                    this.settings = {
+                    icon: 'description',
+                    label: 'advantages.advant',
+                    title: 'advantages.compare_title'
+                }
+            }
+        }
     }
 }
 
 </script>
-
-<style>
-    div.after-name {
-        color: black;
-    }
-
-    div.before-name {
-        color: black;
-    }
-
-    .framed-card {
-        border: rgba(255, 255, 255, 0.3) 1px solid;
-        border-radius: 1em;
-        margin-bottom: 0.5em;
-    }
-
-    .title-aligned {
-        margin: auto;
-    }
-
-    .btn-image {
-        pointer-events: none;
-    }
-</style>

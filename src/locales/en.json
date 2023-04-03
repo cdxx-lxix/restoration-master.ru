@@ -27,8 +27,15 @@
     "card3_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "header": "Advantages",
     "subtitle": "What you'll get for hiring me: ",
-    "button": "Compare",
-    "compare_title": "Comparisson"
+    "compare": "Compare",
+    "compare_title": "Comparison",
+    "advant": "Advantages"
+  },
+  "compare": {
+    "card1": "Before",
+    "card2": "In progress",
+    "card3": "After",
+    "novideo": "Your browser does not support HTML5 video."
   },
   "youtube": {
     "header": "My YouTube channel",
