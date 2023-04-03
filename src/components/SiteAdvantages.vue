@@ -1,6 +1,6 @@
 <template>
     <div class="row full-width wrap justify-center items-center" :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'">
-        <q-card class="bg-secondary" dark flat style="width: 100%;">
+        <q-card class="bg-secondary" dark flat style="width: 100%">
             <q-item class="BG__cardTop">
                 <q-item-section>
                     <q-item-label>{{ $t(settings.title) }}</q-item-label>

@@ -4,10 +4,10 @@
         <q-card-section horizontal class="cardFit">
             <q-card-section>
                 <q-item>
-                    <q-item-label class="text-h6 title-aligned">{{ $t("compare.card1") }}</q-item-label>
+                    <q-item-label class="text-h6 ADVANT__titleAligned">{{ $t("compare.card1") }}</q-item-label>
                 </q-item>
                 <q-separator dark inset />
-                <video controls autoplay muted style="max-width: 100%;">
+                <video controls autoplay muted class="ADVANT__videoWidth">
                     <source :src="beforemp4" type="video/mp4">
                     <source :src="beforewm" type="video/webm">
                     {{ $t('compare.novideo') }}
@@ -16,10 +16,10 @@
 
             <q-card-section>
                 <q-item>
-                    <q-item-label class="text-h6 title-aligned">{{ $t("compare.card2") }}</q-item-label>
+                    <q-item-label class="text-h6 ADVANT__titleAligned">{{ $t("compare.card2") }}</q-item-label>
                 </q-item>
                 <q-separator dark inset />
-                <video controls autoplay muted style="max-width: 100%;">
+                <video controls autoplay muted class="ADVANT__videoWidth">
                     <source :src="inprogmp" type="video/mp4">
                     <source :src="inprogwm" type="video/webm">
                     {{ $t('compare.novideo') }}
@@ -28,10 +28,10 @@
 
             <q-card-section>
                 <q-item>
-                    <q-item-label class="text-h6 title-aligned">{{ $t("compare.card3") }}</q-item-label>
+                    <q-item-label class="text-h6 ADVANT__titleAligned">{{ $t("compare.card3") }}</q-item-label>
                 </q-item>
                 <q-separator dark inset />
-                <video controls autoplay muted style="max-width: 100%;">
+                <video controls autoplay muted class="ADVANT__videoWidth">
                     <source :src="aftermp" type="video/mp4">
                     <source :src="afterwm" type="video/webm">
                     {{ $t('compare.novideo') }}
@@ -45,10 +45,10 @@
         <q-card-section vertical class="cardFit">
             <q-card-section>
                 <q-item>
-                    <q-item-label class="text-h6 title-aligned">{{ $t("compare.card1") }}</q-item-label>
+                    <q-item-label class="text-h6 ADVANT__titleAligned">{{ $t("compare.card1") }}</q-item-label>
                 </q-item>
-                <div class="video-center">
-                    <video controls muted class="video-width">
+                <div class="ADVANT__video_Center">
+                    <video controls muted class="ADVANT__videoWidth">
                         <source :src="beforemp4" type="video/mp4">
                         <source :src="beforewm" type="video/webm">
                         {{ $t('compare.novideo') }}
@@ -59,10 +59,10 @@
 
             <q-card-section>
                 <q-item>
-                    <q-item-label class="text-h6 title-aligned">{{ $t("compare.card2") }}</q-item-label>
+                    <q-item-label class="text-h6 ADVANT__titleAligned">{{ $t("compare.card2") }}</q-item-label>
                 </q-item>
-                <div class="video-center">
-                    <video controls muted class="video-width">
+                <div class="ADVANT__video_Center">
+                    <video controls muted class="ADVANT__videoWidth">
                         <source :src="inprogmp" type="video/mp4">
                         <source :src="inprogwm" type="video/webm">
                         {{ $t('compare.novideo') }}
@@ -72,10 +72,10 @@
 
             <q-card-section>
                 <q-item>
-                    <q-item-label class="text-h6 title-aligned">{{ $t("compare.card3") }}</q-item-label>
+                    <q-item-label class="text-h6 ADVANT__titleAligned">{{ $t("compare.card3") }}</q-item-label>
                 </q-item>
-                <div class="video-center">
-                    <video controls muted class="video-width">
+                <div class="ADVANT__video_Center">
+                    <video controls muted class="ADVANT__videoWidth">
                         <source :src="aftermp" type="video/mp4">
                         <source :src="afterwm" type="video/webm">
                         {{ $t('compare.novideo') }}
@@ -109,22 +109,3 @@ export default {
     }
 }
 </script>
-
-<style>
-.title-aligned {
-    margin: auto;
-}
-
-.btn-image {
-    pointer-events: none;
-}
-
-.video-center {
-    width: 100%;
-    text-align: center;
-}
-
-.video-width {
-    max-width: 100%;
-}
-</style>

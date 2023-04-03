@@ -1,3 +1,16 @@
+/* Main background and minimum site width */
+html
+  --s:50px
+  --c:#191b22
+  --_s:calc(2*var(--s)) calc(2*var(--s))
+  --_g:35.36% 35.36% at
+  --_c:#0000 66%, #20222a 68% 70%, #0000 72%
+  background: radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) (var(--s) / var(--_s)), radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) (var(--s) / var(--_s)), radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 (0 / var(--_s)), radial-gradient(var(--_g) 0 75%, var(--_c)) 0 (0 / var(--_s)), repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 (0 / var(--_s)), radial-gradient(var(--_c)) 0 (calc(var(--s)/2) / var(--s)) var(--s) var(--c)
+  background-attachment: fixed
+
+body
+  min-width: 360px
+/* Desktop header classes */
 .GL
   &__toolbar-link
     a
@@ -16,6 +29,7 @@
     color: $blue-grey-6
     &:hover
       color: $light-blue-9
+/* Width classes for blocks */
 .CNT
   &__eighty
     min-width: 80%
@@ -27,9 +41,11 @@
     max-width: 100%
     margin: auto
     padding: 1em
+/* Gallery classes */
 .AR
   &__wide
     aspect-ratio: 16/9
+/* Backgrounds */
 .BG
   &__cardDark
     background: grey
@@ -37,5 +53,25 @@
   &__cardTop
     background: $info
     background: linear-gradient(90deg, $info 0%, $secondary 100%)
+/* Special class for badly dehaved components */
 .cardFit 
   margin: 0.5em 0.9em 0.5em 0.9em
+/* Advantages components classes */
+.ADVANT
+  &__framedCard
+    border: rgba(255, 255, 255, 0.3) 1px solid
+    border-radius: 1em
+    margin-bottom: 0.5em
+  &__titleAligned
+    margin: auto
+  &__btnImage
+    pointer-events: none
+  &__video
+    width: 100%
+    &_Center
+    text-align: center
+  &__videoWidth
+    max-width: 100%
+.MENU
+  &__width
+    min-width: 100px

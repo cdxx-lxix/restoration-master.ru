@@ -44,7 +44,7 @@
         <!-- START: Name. Left side. @click="drawerLeft = true" -->
         <q-btn flat round dense icon="menu">
           <q-menu auto-close class="bg-primary text-white" transition-show="jump-down" transition-hide="jump-up">
-            <q-list style="min-width: 100px">
+            <q-list class="MENU__width">
 
               <!-- LOGO SECTION -->
               <q-item class="column items-center">
