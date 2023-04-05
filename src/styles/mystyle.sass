@@ -69,9 +69,23 @@ body
   &__video
     width: 100%
     &_Center
-    text-align: center
+      text-align: center
   &__videoWidth
     max-width: 100%
 .MENU
   &__width
     min-width: 100px
+.GAL
+  &__caption
+    pointer-events: none
+    user-select: none
+.IMAGE
+  &__highlight
+    filter: contrast(1.2)
+    transition: transform 0.2s, box-shadow 0.2s
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2)
+.custom-caption
+  text-align: center
+  padding: 12px
+  color: white
+  background-color: rgba(0, 0, 0, .3)

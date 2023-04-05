@@ -18,5 +18,11 @@ module.exports = defineConfig({
       importStrategy: 'kebab',
       rtlSupport: false
     }
+  },
+  pages: {
+    index: {
+      entry: 'src/main.js',
+      title: 'Restoration Master'
+    }
   }
 })

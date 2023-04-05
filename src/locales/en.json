@@ -45,9 +45,12 @@
   "gallery": {
     "header": "Gallery",
     "subtitle": "A picture is worth a thousand words",
-    "before": "before",
-    "after": "after",
-    "button": "Fullscreen"
+    "before": "Before",
+    "after": "After",
+    "button": "Fullscreen",
+    "minimize": "Minimize",
+    "restor": "Restoration",
+    "scrp": "Scraping"
   },
   "contacts": {
     "header": "Contacts",

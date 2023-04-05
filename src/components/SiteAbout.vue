@@ -19,7 +19,7 @@
                     <q-separator dark />
                     <q-item>
                         <q-card-section horizontal>
-                            <q-img basic :src="masterPhoto" />
+                            <q-img basic :src="masterPhoto" class="IMAGE__highlight"/>
                             <q-card-section>
                                 <q-card-section>
                                     <div class="text-h6">{{ $t("about.name") }}</div>

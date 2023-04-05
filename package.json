@@ -1,6 +1,6 @@
 {
-  "name": "app",
-  "version": "0.1.0",
+  "name": "restoration-master",
+  "version": "0.7.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -14,7 +14,6 @@
     "quasar": "^2.0.0",
     "vue": "^3.2.13",
     "vue-i18n": "^9.1.0",
-    "vue-image-compare2": "^1.0.0",
     "vue-window-size": "^2.0.0"
   },
   "devDependencies": {
