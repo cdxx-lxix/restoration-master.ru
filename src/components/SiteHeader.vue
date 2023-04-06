@@ -107,7 +107,7 @@
 </template>
   
 <script>
-import logo from '../assets/rm2.svg'
+import logo from '../assets/icons/rm2.svg'
 import SiteLang from './SiteLanguages.vue'
 
 export default {

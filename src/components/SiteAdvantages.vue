@@ -16,7 +16,8 @@
                 </q-card-actions>
             </q-item>
             <q-separator dark />
-            <component :is="currentComponent"></component>
+            <advantages-table v-if="this.currentComponent === 'AdvantagesTable'"></advantages-table>
+            <advantages-compare v-else-if="this.currentComponent === 'AdvantagesCompare'"></advantages-compare>
         </q-card>
     </div>
 </template>
@@ -32,20 +33,23 @@ export default {
     },
     data() {
         return {
-            currentComponent: AdvantagesTable,
+            // Their are populated before mount
+            currentComponent: '',
             settings: {
-                icon: 'compare',
-                label: 'advantages.compare',
-                title: 'advantages.header'
+                icon: '',
+                label: '',
+                title: ''
             }
         }
     },
     methods: {
         toggleComponent() {
+            // Switch components
             this.currentComponent = this.currentComponent === 'AdvantagesTable' ? 'AdvantagesCompare' : 'AdvantagesTable';
             this.settingsSwitcher()
         },
         settingsSwitcher() {
+            // Change data to match the current component
             if (this.currentComponent === 'AdvantagesTable') {
                 this.settings = {
                     icon: 'compare',
@@ -60,6 +64,10 @@ export default {
                 }
             }
         }
+    },
+    beforeMount() {
+        // Assign value to currentComponent before mount to populate the template
+        this.toggleComponent();
     }
 }
 

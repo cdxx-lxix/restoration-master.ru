@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import ru_lang from '../assets/ru_lang.png'
-import en_lang from '../assets/uk_lang.png'
+import ru_lang from '../assets/icons/ru_lang.png'
+import en_lang from '../assets/icons/uk_lang.png'
   export default {
     data() {
       return {

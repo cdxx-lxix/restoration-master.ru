@@ -55,11 +55,11 @@
 </template>
 
 <script>
-import mail from '../assets/mail.png';
-import phone from '../assets/phone.png';
-import telegram from '../assets/telegram.png';
-import viber from '../assets/viber.png';
-import whatsapp from '../assets/whatsapp.png';
+import mail from '../assets/icons/mail.png';
+import phone from '../assets/icons/phone.png';
+import telegram from '../assets/icons/telegram.png';
+import viber from '../assets/icons/viber.png';
+import whatsapp from '../assets/icons/whatsapp.png';
 
 export default {
     data() {
