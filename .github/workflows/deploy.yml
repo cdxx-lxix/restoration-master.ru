@@ -28,3 +28,4 @@ jobs:
           git status
           cd /var/www/restoration-master.ru/Restoration-master/
           npm install --only=prod
+          npm run build
