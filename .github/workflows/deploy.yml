@@ -26,6 +26,5 @@ jobs:
           cd /var/www/restoration-master.ru/
           git pull origin main
           git status
-          cd Restoration-master
           npm install --only=prod
           npm run build
