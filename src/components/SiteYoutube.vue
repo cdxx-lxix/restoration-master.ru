@@ -4,12 +4,7 @@
         :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="youtube">
         <q-card class="bg-secondary full-width" dark flat>
             <q-item class="BG__cardTop">
-                <q-item-section>
-                    <q-item-label>{{ $t('youtube.header') }}</q-item-label>
-                    <q-item-label caption class="text-white">
-                        {{ $t('youtube.subtitle') }}
-                    </q-item-label>
-                </q-item-section>
+                <q-item-section></q-item-section>
                 <q-card-actions>
                     <q-btn color="red" :label="$t('youtube.button')" :href="channelUrl" />
                 </q-card-actions>
@@ -31,7 +26,7 @@ export default {
             // reqURL - url to make an rss request to avoid usage of youtubes paid api
             // as a result I got json with all of the nessesary data 
             // catch block in case of a failure returns specified channel url and video
-            const cid = "UCQP4POsDskpkSK9OANY1zAA";
+            const cid = "UC0wloL2MbrkafRbZ2CC8qQA";
             let channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`)
             let reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
             try {
@@ -43,7 +38,7 @@ export default {
                 })
             } catch (error) {
                 console.log(error)
-                this.channelUrl = "";
+                this.channelUrl = "https://www.youtube.com/channel/UC0wloL2MbrkafRbZ2CC8qQA";
                 this.lastVideoUrl = "";
             }
         },

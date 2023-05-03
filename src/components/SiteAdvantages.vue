@@ -2,12 +2,7 @@
     <div class="row full-width wrap justify-center items-center" :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'">
         <q-card class="bg-secondary" dark flat style="width: 100%">
             <q-item class="BG__cardTop">
-                <q-item-section>
-                    <q-item-label>{{ $t(settings.title) }}</q-item-label>
-                    <q-item-label caption class="text-white">
-                        {{ $t('advantages.subtitle') }}
-                    </q-item-label>
-                </q-item-section>
+                <q-item-section></q-item-section>
                 <q-card-actions>
                     <q-btn color="grey-9" 
                         :icon="settings.icon"
@@ -37,8 +32,7 @@ export default {
             currentComponent: '',
             settings: {
                 icon: '',
-                label: '',
-                title: ''
+                label: ''
             }
         }
     },
@@ -53,14 +47,12 @@ export default {
             if (this.currentComponent === 'AdvantagesTable') {
                 this.settings = {
                     icon: 'compare',
-                    label: 'advantages.compare',
-                    title: 'advantages.header'
+                    label: 'advantages.compare'
                 } 
             } else {
                     this.settings = {
                     icon: 'description',
-                    label: 'advantages.advant',
-                    title: 'advantages.compare_title'
+                    label: 'advantages.advant'
                 }
             }
         }

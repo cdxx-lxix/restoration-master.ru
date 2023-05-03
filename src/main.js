@@ -8,7 +8,7 @@ import { VueWindowSizePlugin } from 'vue-window-size/plugin';
 const app = createApp(App);
 
 // List of global variables
-app.config.globalProperties.$phoneNumber = "89109101010";
+app.config.globalProperties.$phoneNumber = "+79261725511";
 app.config.globalProperties.$menuLinkOne = "#aboutme";
 app.config.globalProperties.$menuLinkTwo = "#gallery";
 app.config.globalProperties.$menuLinkThree = "#youtube";

@@ -6,29 +6,21 @@
     "contacts": "Контакты",
     "language": "Change to:⠀",
     "title": "Restoration Master",
-    "telephone": "8-910-910-10-10",
     "callme": "Позвонить",
     "compare": "Сравнить",
     "developer": "Связь с разработчиком"
   },
   "about": {
-    "header": "Обо мне",
-    "subtitle": "Мой опыт, виды работ и немного о себе",
-    "title": "Мастер реставраций",
-    "name": "Ян Востров",
-    "aboutme": "(RU)Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "title": "Мастер реставрации",
+    "name": "Ян Давыдов",
+    "aboutme": "Более 4 лет я профессионально занимаюсь реставрацией паркета и элементов декора из дерева в Москве и Московской области. Во время работы используются только профессиональная химия такая как:  Ciranova, Bona, Konig, Berger. Лучшее оборудование от Lagler:  Hummel, Trio, Flip."
   },
   "advantages": {
-    "card1_1": "Bla bla 1",
-    "card1_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "card2_1": "Bla bla 2",
-    "card2_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "card3_1": "Bla bla 3",
-    "card3_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "header": "Преимущества",
-    "subtitle": "Что Вы получите выбрав меня: ",
+    "card1_1": "Реставрация паркета",
+    "card1_2": "При локальных дефектах пола возможно осуществить реставрацию паркета. При реставрации паркета возможно: заменить доску, убрать сколы, трещины, вмятины, и пятна. Нанесение защитного покрытия позволяет продлить срок службы паркета.",
+    "card2_1": "Циклевка паркета",
+    "card2_2": "Для создания красивого полотна пола мы осуществляем работы по паркету. В них входит шлифовка паркета.  Шпкалевание сколов трещин и глубоких царапин. В некоторых случаях замена доски.  После чего паркет покрывается маслом или лаком.",
     "compare": "Сравнить",
-    "compare_title": "Сравнение",
     "advant": "Преимущества"
   },
   "compare": {
@@ -38,23 +30,16 @@
     "novideo": "Ваш браузер не поддеживает HTML5 видео"
   },
   "youtube": {
-    "header": "Мой YouTube канал",
-    "subtitle": "Чистый ASMR",
     "button": "Подписаться"
   },
   "gallery": {
-    "header": "Галлерея",
-    "subtitle": "Лучше один раз увидеть, чем 100 услышать",
     "before": "До",
     "after": "После",
     "button": "Полноэкранный",
-    "minimize": "Свернуть",
-    "restor": "Реставрации",
-    "scrp": "Циклёвки"
+    "minimize": "Свернуть"
   },
-  "contacts": {
-    "header": "Контакты",
-    "subtitle": "Связаться со мной можно любым удобным для Вас способом из доступных",
-    "content": "Я работаю по Москве и Московской области, но для отдельных заказов возможно обсуждение индивидуального подхода. Территориально нахожусь в ЮАО."
+  "tooltips": {
+    "phone": "Ежедневно с 9:00 до 21:00 по МСК",
+    "backtotop": "На верх"
   }
 }
