@@ -6,55 +6,40 @@
     "contacts": "Contacts",
     "language": "Сменить на:⠀",
     "title": "Restoration Master",
-    "telephone": "8-910-910-10-10",
     "callme": "Call me",
     "compare": "Compare",
-    "developer": "Contact with developer"
+    "developer": "Contact the developer"
   },
   "about": {
-    "header": "About me",
-    "subtitle": "My experience, types of works and a bit about myself",
     "title": "Restoration Master",
-    "name": "Yan Vostrov",
-    "aboutme": "(EN)Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "name": "Yan Davydov",
+    "aboutme": "For more than 4 years, I have been professionally engaged in the restoration of parquet flooring and wooden decorative elements in Moscow and the Moscow region. Only professional chemistry such as Ciranova, Bona, Konig, Berger is used during work. The best equipment from Lagler: Hummel, Trio, Flip is used."
   },
   "advantages": {
-    "card1_1": "Bla bla 1",
-    "card1_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "card2_1": "Bla bla 2",
-    "card2_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "card3_1": "Bla bla 3",
-    "card3_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "header": "Advantages",
-    "subtitle": "What you'll get for hiring me: ",
+    "card1_1": "Parquet restoration",
+    "card1_2": "In case of local defects of the floor, it is possible to restore the parquet. During the restoration, it is possible to replace the board, remove chips, cracks, dents, and stains. The application of a protective coating extends the service life of the parquet.",
+    "card2_1": "Parquet sanding",
+    "card2_2": "To create a beautiful floor pattern, we carry out work on the parquet, including sanding the parquet, filling in chips, cracks and deep scratches, and in some cases, replacing boards. After that, the parquet is coated with oil or varnish.",
     "compare": "Compare",
-    "compare_title": "Comparison",
     "advant": "Advantages"
   },
   "compare": {
     "card1": "Before",
     "card2": "In progress",
     "card3": "After",
-    "novideo": "Your browser does not support HTML5 video."
+    "novideo": "Your browser does not support HTML5 video"
   },
   "youtube": {
-    "header": "My YouTube channel",
-    "subtitle": "Pure ASMR",
     "button": "Subscribe"
   },
   "gallery": {
-    "header": "Gallery",
-    "subtitle": "A picture is worth a thousand words",
     "before": "Before",
     "after": "After",
     "button": "Fullscreen",
-    "minimize": "Minimize",
-    "restor": "Restoration",
-    "scrp": "Scraping"
+    "minimize": "Minimize"
   },
-  "contacts": {
-    "header": "Contacts",
-    "subtitle": "Reach out to me with any of the provided options that is the best for you",
-    "content": "I work in Moscow and Moscow Area but for a special orders we can discuss individual solution. Personally located in Southern AD."
+  "tooltips": {
+    "phone": "Every day from 9:00 to 21:00 Moscow time",
+    "backtotop": "Back to top"
   }
 }

@@ -1,5 +1,8 @@
 <template>
-    <q-btn dense flat no-wrap><a class="GL__toolbar-link text-white text-body2 text-weight-bold" :href="'tel:'+this.$phoneNumber">{{ this.$phoneNumber }}</a></q-btn>
+    <q-btn dense flat no-wrap>
+      <a class="GL__toolbar-link text-white text-body2 text-weight-bold" :href="'tel:'+this.$phoneNumber">{{ this.$phoneNumber }}</a>
+      <q-tooltip>{{ $t("tooltips.phone") }}</q-tooltip>
+    </q-btn>
     <div class="q-pl-sm q-gutter-sm row items-center no-wrap">
         <q-btn dense flat no-wrap>
           <q-avatar rounded size="20px">

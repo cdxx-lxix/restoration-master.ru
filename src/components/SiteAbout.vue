@@ -7,10 +7,6 @@
                 <q-card class="bg-secondary" dark flat>
                     <q-item class="BG__cardTop">
                         <q-item-section>
-                            <q-item-label>{{ $t("about.header") }}</q-item-label>
-                            <q-item-label caption class="text-white">
-                                {{ $t("about.subtitle") }}
-                            </q-item-label>
                         </q-item-section>
                         <q-card-actions class="justify-end">
                             <q-btn color="grey-9" icon="expand_more" :href="$menuLinkTwo" />
@@ -44,12 +40,7 @@
         <div class="fit" :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="aboutme">
             <q-card class="bg-secondary" dark flat>
                 <q-item class="BG__cardTop">
-                    <q-item-section>
-                        <q-item-label>{{ $t("about.header") }}</q-item-label>
-                        <q-item-label caption class="text-white">
-                            {{ $t("about.subtitle") }}
-                        </q-item-label>
-                    </q-item-section>
+                    <q-item-section></q-item-section>
                     <q-card-actions>
                         <q-btn color="grey-9" icon="expand_more" :href="$menuLinkTwo" />
                     </q-card-actions>
@@ -60,7 +51,7 @@
                     <div class="text-h6" style="margin-top: 0.5em;">{{ $t("about.name") }}</div>
                     <div class="text-subtitle2" style="margin-bottom: 0.5em;">{{ $t("about.title") }}</div>
                     <q-separator dark />
-                    <p style="margin-top: 0.5em;">{{ $t("about.aboutme") }}</p>
+                    <p style="margin-top: 0.5em;">{{ $t('about.aboutme') }}</p>
                 </q-card-section>
             </q-card>
         </div>
@@ -68,11 +59,13 @@
 </template>
 
 <script>
-import masterPhoto from '../assets/master_photo.jpg'
+import masterPhoto from '../assets/master_photo.png'
 export default {
     data() {
         return {
-            masterPhoto
+            masterPhoto,
+            chemistry: 'Hey',
+            tools: 'Hoy'
         }
     }
 }

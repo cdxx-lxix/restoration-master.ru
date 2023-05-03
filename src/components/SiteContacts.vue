@@ -4,12 +4,7 @@
             :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="contacts">
             <q-card class="bg-secondary" dark flat>
                 <q-item class="BG__cardTop">
-                    <q-item-section>
-                        <q-item-label>{{ $t('contacts.header') }}</q-item-label>
-                        <q-item-label caption class="text-white">
-                            {{ $t('contacts.subtitle') }}
-                        </q-item-label>
-                    </q-item-section>
+                    <q-item-section></q-item-section>
                     <q-card-actions>
                         <q-btn v-for="option in contactOptions" :key="option" :href="option.link" round dense flat
                             :ripple="{ center: true }"><q-avatar><img :src="option.name"></q-avatar></q-btn>
@@ -31,17 +26,14 @@
             :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="contacts">
             <q-card class="bg-secondary" dark flat>
                 <q-item class="BG__cardTop">
-                    <q-item-section>
-                        <q-item-label>{{ $t('contacts.header') }}</q-item-label>
-                        <q-item-label caption class="text-white">
-                            {{ $t('contacts.subtitle') }}
-                        </q-item-label>
-                    </q-item-section>
+                    <q-item-section></q-item-section>
+                    <q-card-actions class="justify-end">
+                        <q-btn v-for="option in contactOptions" :key="option" :href="option.link" round dense flat
+                            :ripple="{ center: true }">
+                            <q-avatar><img :src="option.name"></q-avatar>
+                        </q-btn>
+                    </q-card-actions>
                 </q-item>
-                <q-card-actions class="justify-center items-center content-center">
-                    <q-btn v-for="option in contactOptions" :key="option" :href="option.link" round dense flat
-                        :ripple="{ center: true }"><q-avatar><img :src="option.name"></q-avatar></q-btn>
-                </q-card-actions>
                 <q-separator dark />
                 <q-card-section horizontal>
                     <iframe
@@ -55,21 +47,17 @@
 </template>
 
 <script>
-import mail from '../assets/icons/mail.png';
+// import mail from '../assets/icons/mail.png';
 import phone from '../assets/icons/phone.png';
-import telegram from '../assets/icons/telegram.png';
-import viber from '../assets/icons/viber.png';
 import whatsapp from '../assets/icons/whatsapp.png';
 
 export default {
     data() {
         return {
             contactOptions: {
-                wp: { name: whatsapp, link: '' },
-                vb: { name: viber, link: '' },
-                tg: { name: telegram, link: '' },
-                ph: { name: phone, link: '' },
-                ml: { name: mail, link: '' }
+                wp: { name: whatsapp, link: 'https://wa.me/79261725511' },
+                ph: { name: phone, link: 'tel:' + this.$phoneNumber }
+                // ml: { name: mail, link: 'mailto:yan@restoration-master.ru' }
             }
         }
     }

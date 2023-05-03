@@ -10,7 +10,9 @@
         <SiteContacts />
         <q-page-sticky position="bottom-right" :offset="[18, 18]">
           <q-btn fab icon="keyboard_arrow_up" color="accent" @click="backToTop" id="toTopButton"
-            :style="scrollDetector()" />
+            :style="scrollDetector()">
+            <q-tooltip anchor="top middle" self="top middle" :offset="[40, 40]">{{ $t("tooltips.backtotop") }}</q-tooltip>
+          </q-btn>
         </q-page-sticky>
       </q-page>
     </q-page-container>
