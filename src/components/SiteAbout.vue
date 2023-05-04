@@ -50,13 +50,11 @@
 </template>
 
 <script>
-import masterPhoto from '../assets/master_photo.png'
+import masterPhoto from '../assets/master_photo.webp'
 export default {
     data() {
         return {
-            masterPhoto,
-            chemistry: 'Hey',
-            tools: 'Hoy'
+            masterPhoto
         }
     }
 }

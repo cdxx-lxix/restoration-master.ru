@@ -1,17 +1,17 @@
 <template>
-    <template v-if="$windowWidth >= 680">
-        <div class="fit row wrap justify-center items-center content-center"
-            :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="contacts">
-
-            <q-card dark flat class="col-12 bg-secondary">
-                <q-img :src="moscowMap">
+    <div class="fit wrap justify-center items-center content-center"
+        :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="contacts">
+        <q-card dark flat class="row bg-secondary">
+            <div :class="columnsCalculator().map">
+                <q-img :src="moscowMap" loading="lazy" alt="Moscow map" style="height: 100%;">
                     <div class="absolute-bottom text-subtitle2 text-center text-bold">
                         {{ $t('contacts.map') }}
                     </div>
                 </q-img>
-
-                <q-list>
-                    <q-item clickable v-for="option in contactOptions" :key="option">
+            </div>
+            <div :class="columnsCalculator().contacts">
+                <q-list class="fit" separator>
+                    <q-item clickable v-for="option in contactOptions" :key="option" :href="option.link" :style="'height:' + 100 / Object.keys(contactOptions).length + '%'">
                         <q-item-section avatar>
                             <q-avatar size="50px">
                                 <img :src="option.icon">
@@ -24,34 +24,9 @@
                         </q-item-section>
                     </q-item>
                 </q-list>
-            </q-card>
-
-        </div>
-    </template>
-
-    <template v-else>
-        <div class="fit row-inline wrap justify-center items-center content-center"
-            :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="contacts">
-            <q-card class="bg-secondary" dark flat>
-                <q-item class="BG__cardTop">
-                    <q-item-section></q-item-section>
-                    <q-card-actions class="justify-end">
-                        <q-btn v-for="option in contactOptions" :key="option" :href="option.link" round dense flat
-                            :ripple="{ center: true }">
-                            <q-avatar><img :src="option.icon"></q-avatar>
-                        </q-btn>
-                    </q-card-actions>
-                </q-item>
-                <q-separator dark />
-                <q-card-section horizontal>
-                    <iframe
-                        src="https://yandex.com/map-widget/v1/?um=constructor%3Acfa91728df9cc902371cc18495e202dce9fa5f8988f04f38bee61b920ba0c88b&amp;source=constructor"
-                        width="100%" height="425" frameborder="0" class="cardFit">
-                    </iframe>
-                </q-card-section>
-            </q-card>
-        </div>
-    </template>
+            </div>
+        </q-card>
+    </div>
 </template>
 
 <script>
@@ -71,6 +46,17 @@ export default {
                 yt: { icon: youtube, link: '', title: 'contacts.yttitle', desc: 'contacts.ytdesc', btn: 'contacts.ytbtn' }
             },
             moscowMap
+        }
+    },
+    methods: {
+        columnsCalculator() {
+            if (this.$windowWidth >= 1100) {
+                return { map: 'col-8', contacts: 'col-4' }
+            } else if (this.$windowWidth >= 700 ) {
+                return { map: 'col-7', contacts: 'col-5' }
+            } else {
+                return { map: 'col-12', contacts: 'col-12' }
+            }
         }
     }
 }
