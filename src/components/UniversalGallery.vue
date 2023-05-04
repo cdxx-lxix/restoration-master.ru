@@ -5,94 +5,29 @@
             :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="gallery">
             <div class="col-12 col-md-12">
                 <q-card class="bg-secondary" dark flat>
-                    <q-item class="BG__cardTop">
-                        <q-item-section></q-item-section>
-                        <q-card-actions v-model="tab">
-                            <q-btn color="grey-9" icon="fullscreen" @click="fullscreen = !fullscreen">{{
-                                $t('gallery.button') }}</q-btn>
-                        </q-card-actions>
-                    </q-item>
-
-                    <q-separator dark />
 
                     <q-carousel v-model="slide" transition-prev="slide-right" transition-next="slide-left" swipeable
-                        animated control-color="warning" navigation padding arrows
-                        class="bg-secondary shadow-1 rounded-borders" :height="($windowHeight * 0.85) + 'px'"
-                        v-model:fullscreen="fullscreen">
+                        animated control-color="warning" navigation arrows class="bg-secondary shadow-1 rounded-borders"
+                        :height="($windowHeight * 0.85) + 'px'">
 
-                        <q-carousel-slide :name="1" class="row full-width justify-around no-wrap">
+                        <q-carousel-slide v-for="pair in imgPairs" :name="pair[0]" :key="pair"
+                            class="row full-width justify-around no-wrap">
 
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="restOneA">
+                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="pair[1]" loading="lazy">
                                 <div class="absolute-bottom custom-caption">
                                     <div class="text-h5 GAL__caption">{{ $t('gallery.before') }}</div>
                                 </div>
                             </q-img>
 
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="restOneB">
+                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="pair[2]" loading="lazy">
                                 <div class="absolute-bottom custom-caption">
                                     <div class="text-h5 GAL__caption">{{ $t('gallery.after') }}</div>
                                 </div>
                             </q-img>
 
                         </q-carousel-slide>
-
-                        <q-carousel-slide :name="2" class="row full-width justify-around no-wrap">
-
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="restTwoA">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.before') }}</div>
-                                </div>
-                            </q-img>
-
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="restTwoB">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.after') }}</div>
-                                </div>
-                            </q-img>
-
-                        </q-carousel-slide>
-
-                        <q-carousel-slide :name="3" class="row full-width justify-around no-wrap">
-
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="scrpOneA">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.before') }}</div>
-                                </div>
-                            </q-img>
-
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="scrpOneB">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.after') }}</div>
-                                </div>
-                            </q-img>
-
-                        </q-carousel-slide>
-
-                        <q-carousel-slide :name="4" class="row full-width justify-around no-wrap">
-
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="scrpTwoA">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.before') }}</div>
-                                </div>
-                            </q-img>
-
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="scrpTwoB">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.after') }}</div>
-                                </div>
-                            </q-img>
-
-                        </q-carousel-slide>
-
-                        <!-- Fullscreen control template -->
-                        <template v-slot:control v-if="fullscreen">
-                            <q-carousel-control position="top-right" :offset="[70, 30]">
-                                <q-btn push dense color="white" text-color="primary" icon="fullscreen_exit"
-                                    @click="fullscreen = !fullscreen">{{ $t('gallery.minimize') }}</q-btn>
-                            </q-carousel-control>
-                        </template>
-
                     </q-carousel>
+
                 </q-card>
             </div>
         </div>
@@ -104,108 +39,35 @@
             :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="gallery">
             <div class="col-12 col-md-12">
                 <q-card class="bg-secondary" dark flat>
-                    <q-item class="BG__cardTop">
-                        <q-item-section></q-item-section>
-                        <q-card-actions v-model="tab">
-                            <q-btn color="grey-9" icon="fullscreen" @click="fullscreen = !fullscreen">{{
-                                $t('gallery.button') }}</q-btn>
-                        </q-card-actions>
-                    </q-item>
 
                     <q-carousel v-model="slide" transition-prev="slide-right" transition-next="slide-left" swipeable
-                        animated control-color="warning" navigation padding arrows
-                        class="bg-secondary shadow-1 rounded-borders" :height="($windowHeight * 0.85) + 'px'"
-                        v-model:fullscreen="fullscreen">
+                        animated control-color="warning" navigation arrows
+                        class="bg-secondary shadow-1 rounded-borders" :height="$windowHeight + 'px'">
 
-                        <q-carousel-slide :name="1" class="row full-width justify-around no-wrap">
+                        <template v-for="pair in imgPairs" :key="pair">
+                            <q-carousel-slide :name="pair[0]" class="row full-width justify-around no-wrap">
 
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="restOneA">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.before') }}</div>
-                                </div>
-                            </q-img>
+                                <q-img class="rounded-borders full-height IMAGE__highlight" :src="pair[1]" loading="lazy">
+                                    <div class="absolute-top-left custom-caption">
+                                        <div class="text-h5 text-left GAL__caption">{{ $t('gallery.before') }}</div>
+                                    </div>
+                                </q-img>
 
-                        </q-carousel-slide>
+                            </q-carousel-slide>
 
-                        <q-carousel-slide :name="2" class="row full-width justify-around no-wrap">
+                            <q-carousel-slide :name="pair[0]+1" class="row full-width justify-around no-wrap">
 
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="restOneB">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.after') }}</div>
-                                </div>
-                            </q-img>
+                                <q-img class="rounded-borders full-height IMAGE__highlight" :src="pair[2]" loading="lazy">
+                                    <div class="absolute-top-left custom-caption">
+                                        <div class="text-h5 GAL__caption">{{ $t('gallery.after') }}</div>
+                                    </div>
+                                </q-img>
 
-                        </q-carousel-slide>
-
-                        <q-carousel-slide :name="3" class="row full-width justify-around no-wrap">
-
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="restTwoA">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.before') }}</div>
-                                </div>
-                            </q-img>
-
-                        </q-carousel-slide>
-
-                        <q-carousel-slide :name="4" class="row full-width justify-around no-wrap">
-
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="restTwoB">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.after') }}</div>
-                                </div>
-                            </q-img>
-
-                        </q-carousel-slide>
-
-                        <q-carousel-slide :name="5" class="row full-width justify-around no-wrap">
-
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="scrpOneA">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.before') }}</div>
-                                </div>
-                            </q-img>
-
-                        </q-carousel-slide>
-
-                        <q-carousel-slide :name="6" class="row full-width justify-around no-wrap">
-
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="scrpOneB">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.after') }}</div>
-                                </div>
-                            </q-img>
-
-                        </q-carousel-slide>
-
-                        <q-carousel-slide :name="7" class="row full-width justify-around no-wrap">
-
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="scrpTwoA">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.before') }}</div>
-                                </div>
-                            </q-img>
-
-                        </q-carousel-slide>
-
-                        <q-carousel-slide :name="8" class="row full-width justify-around no-wrap">
-
-                            <q-img class="rounded-borders full-height IMAGE__highlight" :src="scrpTwoB">
-                                <div class="absolute-bottom custom-caption">
-                                    <div class="text-h5 GAL__caption">{{ $t('gallery.after') }}</div>
-                                </div>
-                            </q-img>
-
-                        </q-carousel-slide>
-
-                        <!-- Fullscreen control template -->
-                        <template v-slot:control v-if="fullscreen">
-                            <q-carousel-control position="top-right" :offset="[70, 30]">
-                                <q-btn push dense color="white" text-color="primary" icon="fullscreen_exit"
-                                    @click="fullscreen = !fullscreen">{{ $t('gallery.minimize') }}</q-btn>
-                            </q-carousel-control>
+                            </q-carousel-slide>
                         </template>
 
                     </q-carousel>
+
                 </q-card>
             </div>
         </div>
@@ -227,17 +89,13 @@ import scrpTwoB from '../assets/slides/scrpTwoAfter.webp';
 export default {
     setup() {
         return {
-            tab: ref('restorations'),
             slide: ref(1),
-            restOneA,
-            restOneB,
-            restTwoA,
-            restTwoB,
-            scrpOneA,
-            scrpOneB,
-            scrpTwoA,
-            scrpTwoB,
-            fullscreen: ref(false)
+            imgPairs: {
+                restOne: [1, restOneA, restOneB],
+                restTwo: [3, restTwoA, restTwoB],
+                scrpOne: [5, scrpOneA, scrpOneB],
+                scrpTwo: [7, scrpTwoA, scrpTwoB]
+            }
         }
     }
 }

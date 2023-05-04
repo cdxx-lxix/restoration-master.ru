@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import ru_lang from '../assets/icons/ru_lang.png'
-import en_lang from '../assets/icons/uk_lang.png'
+import ru_lang from '../assets/icons/russia-flag.svg'
+import en_lang from '../assets/icons/uk-flag.svg'
   export default {
     data() {
       return {

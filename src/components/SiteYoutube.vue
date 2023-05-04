@@ -3,14 +3,7 @@
     <div class="row wrap justify-center items-center content-center"
         :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="youtube">
         <q-card class="bg-secondary full-width" dark flat>
-            <q-item class="BG__cardTop">
-                <q-item-section></q-item-section>
-                <q-card-actions>
-                    <q-btn color="red" :label="$t('youtube.button')" :href="channelUrl" />
-                </q-card-actions>
-            </q-item>
-            <q-separator dark />
-            <q-video :ratio="16 / 9" :src="lastVideoUrl" frameborder="0" allowfullscreen class="cardFit"/>
+            <q-video loading="lazy" :ratio="16 / 9" :src="lastVideoUrl" frameborder="0" allowfullscreen class="cardFit"/>
         </q-card>
     </div>
 </template>
