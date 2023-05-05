@@ -40,10 +40,10 @@ export default {
     data() {
         return {
             contactOptions: {
-                wp: { icon: whatsapp, link: 'https://wa.me/79261725511', title: 'contacts.watitle', desc: 'contacts.wadesc', btn: 'contacts.wabtn' },
-                ph: { icon: phone, link: 'tel:' + this.$phoneNumber, title: 'contacts.phtitle', desc: 'contacts.phdesc', btn: 'contacts.phbtn' },
-                vk: { icon: vk, link: '', title: 'contacts.vktitle', desc: 'contacts.vkdesc', btn: 'contacts.vkbtn' },
-                yt: { icon: youtube, link: '', title: 'contacts.yttitle', desc: 'contacts.ytdesc', btn: 'contacts.ytbtn' }
+                wp: { icon: whatsapp, link: 'https://wa.me/79261725511', title: 'contacts.watitle', desc: 'contacts.wadesc' },
+                ph: { icon: phone, link: 'tel:' + this.$phoneNumber, title: 'contacts.phtitle', desc: 'contacts.phdesc' },
+                vk: { icon: vk, link: '', title: 'contacts.vktitle', desc: 'contacts.vkdesc' },
+                yt: { icon: youtube, link: '', title: 'contacts.yttitle', desc: 'contacts.ytdesc' }
             },
             moscowMap
         }

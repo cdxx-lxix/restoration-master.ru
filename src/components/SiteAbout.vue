@@ -1,28 +1,53 @@
 <template>
     <!-- Desktop and tablets -->
     <template v-if="$windowWidth >= 880">
-        <div class="fit row wrap justify-center items-center content-center"
-            :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="aboutme">
-            <div class="col-12 col-md-auto">
-                <q-card class="bg-secondary" dark flat>
-                    <q-item>
-                        <q-card-section horizontal>
-                            <q-img basic :src="masterPhoto" class="IMAGE__highlight" loading="lazy" alt="Master's photo"/>
-                            <q-card-section>
-                                <q-card-section>
-                                    <div class="text-h6">{{ $t("about.title") }}</div>
-                                </q-card-section>
+        <div class="fit" :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="aboutme">
+            <q-card class="bg-secondary" dark flat>
+                
+                <q-card-section horizontal>
+                    <q-img basic :src="masterPhoto" loading="lazy" />
+                    <!-- <q-card-section class="q-pt-none">
+                        <div class="text-overline text-light-blue-5">RM|</div>
+                        <div class="text-h5 q-mt-sm q-mb-xs">{{ $t("about.title") }}</div>
+                        <q-separator dark />
+                        <div class="text-subtitle2">{{ $t('about.aboutme') }}</div>
+                    </q-card-section> -->
+                    <q-card-section class="q-pt-none">
+                        <q-list separator padding>
+                            <q-item>
+                                <q-item-section>
+                                    <q-item-label class="text-h4 q-mt-sm q-mb-xs">{{ $t("about.title") }}</q-item-label>
+                                    <q-item-label caption class="text-body1 text-weight-medium text-white">{{ $t('about.aboutme') }}</q-item-label>
+                                </q-item-section>
+                            </q-item>
+                            <q-item class="justify-center items-center content-center">
+                                <q-avatar size="100px">
+                                    <img :src="ciranova">
+                                </q-avatar>
+                                <q-avatar size="100px">
+                                    <img :src="bona">
+                                </q-avatar>
+                                <q-avatar size="100px">
+                                    <img :src="konig">
+                                </q-avatar>
+                                <q-avatar size="100px">
+                                    <img :src="berger">
+                                </q-avatar>
+                                <q-avatar size="100px">
+                                    <img :src="lagler">
+                                </q-avatar>
+                            </q-item>
+                            <q-item>
+                                <q-item-section>
+                                    <q-item-label class="text-h6 q-mt-sm q-mb-xs">Условия работы</q-item-label>
+                                <q-item-label caption class="text-body1 text-weight-medium text-white">Работаем по Москве и Московской области. Выезд за эти пределы обсуждается индивидуально.</q-item-label>
+                                </q-item-section>
+                            </q-item>
+                        </q-list>
+                    </q-card-section>
+                </q-card-section>
 
-                                <q-separator dark inset />
-
-                                <q-card-section>
-                                    {{ $t("about.aboutme") }}
-                                </q-card-section>
-                            </q-card-section>
-                        </q-card-section>
-                    </q-item>
-                </q-card>
-            </div>
+            </q-card>
         </div>
     </template>
 
@@ -30,19 +55,13 @@
     <template v-else>
         <div class="fit" :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="aboutme">
             <q-card class="bg-secondary" dark flat>
-                <q-item class="BG__cardTop">
-                    <q-item-section></q-item-section>
-                    <q-card-actions>
-                        <q-btn color="grey-9" icon="expand_more" :href="$menuLinkTwo" />
-                    </q-card-actions>
-                </q-item>
-                <q-separator dark />
+                <q-img basic :src="masterPhoto" loading="lazy" />
                 <q-card-section vertical>
-                    <q-img basic :src="masterPhoto" loading="lazy" />
-                    <div class="text-h6" style="margin-top: 0.5em;">{{ $t("about.name") }}</div>
-                    <div class="text-subtitle2" style="margin-bottom: 0.5em;">{{ $t("about.title") }}</div>
+                    <div class="text-h6">{{ $t("about.title") }}</div>
                     <q-separator dark />
-                    <p style="margin-top: 0.5em;">{{ $t('about.aboutme') }}</p>
+                </q-card-section>
+                <q-card-section class="q-pt-none">
+                    {{ $t('about.aboutme') }}
                 </q-card-section>
             </q-card>
         </div>
@@ -51,10 +70,21 @@
 
 <script>
 import masterPhoto from '../assets/master_photo.webp'
+import ciranova from '../assets/brands/ciranova.webp'
+import bona from '../assets/brands/bona.webp'
+import konig from '../assets/brands/konig.webp'
+import berger from '../assets/brands/berger.webp'
+import lagler from '../assets/brands/lagler.webp'
+
 export default {
     data() {
         return {
-            masterPhoto
+            masterPhoto,
+            ciranova,
+            bona,
+            konig,
+            berger,
+            lagler
         }
     }
 }

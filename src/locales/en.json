@@ -1,12 +1,12 @@
 {
   "menu": {
-    "start": "About me",
+    "start": "About us",
     "restorations": "Gallery",
-    "scrapings": "My channel",
+    "scrapings": "Our channel",
     "contacts": "Contacts",
     "language": "Сменить на:⠀",
     "title": "Restoration Master",
-    "callme": "Call me",
+    "callme": "Call us",
     "compare": "Compare",
     "developer": "Contact the developer"
   },

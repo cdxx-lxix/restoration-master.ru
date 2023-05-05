@@ -1,8 +1,8 @@
 {
   "menu": {
-    "start": "Обо мне",
+    "start": "О нас",
     "restorations": "Галлерея",
-    "scrapings": "Мой канал",
+    "scrapings": "Наш канал",
     "contacts": "Контакты",
     "language": "Change to:⠀",
     "title": "Restoration Master",
@@ -34,16 +34,12 @@
   "contacts": {
     "watitle": "What's app",
     "wadesc": "Связаться с нами можно через What's app",
-    "wabtn": "Написать",
     "phtitle": "Телефон",
     "phdesc": "Нам всегда можно позвонить с 9:00 до 21:00 по МСК",
-    "phbtn": "Позвонить",
     "vktitle": "Вконтакте",
     "vkdesc": "Посетите наш паблик ВК",
-    "vkbtn": "Посетить",
     "yttitle": "Youtube",
     "ytdesc": "Посетите наш канал на ютубе",
-    "ytbtn": "Перейти",
     "map": "Работаем по Москве и Московской области. Выезд за эти пределы обсуждается индивидуально."
   }
 }
