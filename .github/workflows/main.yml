@@ -1,4 +1,4 @@
-name: Deploy to server
+name: Deploy to the server
 
 # Controls when the action will run. 
 on:
@@ -26,6 +26,5 @@ jobs:
           cd /var/www/restoration-master.ru/
           git pull origin main
           git status
-          cd Restoration-master
-          npm install --only=prod
+          npm install 
           npm run build
