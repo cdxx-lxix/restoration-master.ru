@@ -33,7 +33,7 @@
                             </div>
                         </q-img>
                     </q-carousel-slide>
-                    <q-carousel-slide :name="pair[0] + 1" class="row full-width justify-around no-wrap">
+                    <q-carousel-slide :name="pair[0] + 1" class="row full-width justify-around no-wrap" style="padding: 0px !important">
                         <q-img class="rounded-borders full-height IMAGE__highlight" :src="pair[2]" loading="lazy" :alt="pair[2]">
                             <div class="absolute-top-left custom-caption">
                                 <div class="text-h5 GAL__caption">{{ $t('gallery.after') }}</div>
