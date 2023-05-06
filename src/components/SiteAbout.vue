@@ -6,7 +6,33 @@
                 
                 <q-card-section horizontal>
                     <q-img basic :src="masterPhoto" loading="lazy" />
-                    <q-card-section class="q-pt-none">
+                    <q-card-section class="q-pt-none col-7">
+                        <!-- <q-item>
+                            <q-item-section>
+                                <q-item-label class="text-body1 text-weight-medium text-white">{{ $t("about.title") }}</q-item-label>
+                            </q-item-section>
+                        </q-item>
+                        <q-item>
+                            <q-item-section>
+                                <div>Более 4 лет мы профессионально занимаемся Реставрацией паркета и элементов декора из дерева в Москве и Московской области.</div>
+                                <div>Услуги и сроки реставрации обговариваются после просмотра объекта.</div>
+                                <div>Выезд по Москве для консультации и предварительного просмотра объекта бесплатный. По Московской области 500 рублей.</div>
+                                <div>Для выполнения циклёвочных работ вы оплачиваете материалы, после чего их привозят на объект. Минимальный заказ от 15 метров.</div>
+                                <div>Во время работы используются только профессиональная химия:</div> 
+                                <ul>
+                                    <li>Ciranova</li>
+                                    <li>Bona</li>
+                                    <li>Konig</li>
+                                    <li>Berger</li>
+                                </ul>
+                                <div>И немецкое оборудование Lagler:</div>
+                                <ul>
+                                    <li>Hummel</li>
+                                    <li>Trio</li>
+                                    <li>Flip</li>
+                                </ul>
+                            </q-item-section>
+                        </q-item> -->
                         <q-list separator padding class="fit">
                             <q-item style="height: 25%;">
                                 <q-item-section>
