@@ -3,7 +3,7 @@
     <template v-if="$windowWidth >= 680">
         <q-card-section horizontal class="cardFit">
             <q-card-section class="col-6">
-                <q-item>
+                <q-item role="none">
                     <q-item-label class="text-h6 ADVANT__titleAligned">{{ $t("advantages.card1_1") }}</q-item-label>
                     <q-space />
                     <q-card-actions><q-btn unelevated flat icon="construction" class="ADVANT__btnImage" /></q-card-actions>
@@ -17,7 +17,7 @@
             <q-separator vertical dark inset />
 
             <q-card-section class="col-6">
-                <q-item>
+                <q-item role="none">
                     <q-item-label class="text-h6 ADVANT__titleAligned">{{ $t("advantages.card2_1") }}</q-item-label>
                     <q-space />
                     <q-card-actions><q-btn unelevated flat icon="view_timeline" class="ADVANT__btnImage" /></q-card-actions>

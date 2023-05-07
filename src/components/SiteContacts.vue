@@ -11,10 +11,10 @@
             </div>
             <div :class="columnsCalculator().contacts">
                 <q-list class="fit" separator>
-                    <q-item clickable v-for="option in contactOptions" :key="option" :href="option.link" :style="'height:' + 100 / Object.keys(contactOptions).length + '%'">
+                    <q-item clickable v-for="option in contactOptions" :key="option" :href="option.link" :style="'height:' + 100 / Object.keys(contactOptions).length + '%'" role="none">
                         <q-item-section avatar>
                             <q-avatar size="50px">
-                                <img :src="option.icon" :alt="option.icon">
+                                <img :src="option.icon" :alt="option.title">
                             </q-avatar>
                         </q-item-section>
 
