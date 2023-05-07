@@ -6,7 +6,7 @@
     <div class="q-pl-sm q-gutter-sm row items-center no-wrap">
         <q-btn dense flat no-wrap>
           <q-avatar rounded size="20px">
-            <img :src="iconSwitcher()">
+            <img :src="iconSwitcher()" :alt="iconSwitcher">
           </q-avatar>
           <q-icon name="arrow_drop_down" size="16px" />
 

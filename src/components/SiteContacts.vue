@@ -14,7 +14,7 @@
                     <q-item clickable v-for="option in contactOptions" :key="option" :href="option.link" :style="'height:' + 100 / Object.keys(contactOptions).length + '%'">
                         <q-item-section avatar>
                             <q-avatar size="50px">
-                                <img :src="option.icon">
+                                <img :src="option.icon" :alt="option.icon">
                             </q-avatar>
                         </q-item-section>
 
@@ -43,7 +43,7 @@ export default {
                 wp: { icon: whatsapp, link: 'https://wa.me/79261725511', title: 'contacts.watitle', desc: 'contacts.wadesc' },
                 ph: { icon: phone, link: 'tel:' + this.$phoneNumber, title: 'contacts.phtitle', desc: 'contacts.phdesc' },
                 vk: { icon: vk, link: '', title: 'contacts.vktitle', desc: 'contacts.vkdesc' },
-                yt: { icon: youtube, link: '', title: 'contacts.yttitle', desc: 'contacts.ytdesc' }
+                yt: { icon: youtube, link: 'https://www.youtube.com/@restoration_master', title: 'contacts.yttitle', desc: 'contacts.ytdesc' }
             },
             moscowMap
         }

@@ -5,7 +5,49 @@ import { Quasar } from 'quasar'
 import quasarUserOptions from './quasar-user-options'
 import { VueWindowSizePlugin } from 'vue-window-size/plugin';
 
-const app = createApp(App);
+
+// Lazy loading of components
+const SiteHeader = () => import(
+    /* webpackChunkName: "SiteHeader" */ './components/SiteHeader.vue'
+);
+const SiteLanguages = () => import(
+    /* webpackChunkName: "SiteLanguages" */ './components/SiteLanguages.vue'
+);
+const SiteAbout = () => import(
+    /* webpackChunkName: "SiteAbout" */ './components/SiteAbout.vue'
+);
+const UniversalGallery = () => import(
+    /* webpackChunkName: "UniversalGallery" */ './components/UniversalGallery.vue'
+);
+const SiteAdvantages  = () => import(
+    /* webpackChunkName: "SiteAdvantages" */ './components/SiteAdvantages.vue'
+);
+const AdvantagesTable = () => import(
+    /* webpackChunkName: "AdvantagesTable" */ './components/AdvantagesTable.vue'
+);
+const SiteYoutube = () => import(
+    /* webpackChunkName: "SiteYoutube" */ './components/SiteYoutube.vue'
+);
+const SiteContacts = () => import(
+    /* webpackChunkName: "SiteContacts" */ './components/SiteContacts.vue'
+);
+const SiteFooter = () => import(
+    /* webpackChunkName: "SiteFooter" */ './components/SiteFooter.vue'
+);
+
+const app = createApp(App, {
+    components: {
+      SiteHeader,
+      SiteLanguages,
+      SiteAbout,
+      UniversalGallery,
+      SiteAdvantages,
+      AdvantagesTable,
+      SiteYoutube,
+      SiteContacts,
+      SiteFooter
+    }
+});
 
 // List of global variables
 app.config.globalProperties.$phoneNumber = "+79261725511";

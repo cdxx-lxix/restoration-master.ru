@@ -2,36 +2,40 @@
     <div class="fit" :class="$windowWidth >= 1080 ? 'CNT__eighty' : 'CNT__all'" id="aboutme">
         <q-card class="bg-secondary" dark flat>
 
-            <template v-if="$windowWidth >= 1260">
+            <template v-if="$windowWidth >= 1080">
                 <q-card-section horizontal>
-                    <q-img basic :src="masterPhoto" loading="lazy" />
-                    <q-card-section class="q-pt-none " :class="$windowWidth >= 1420 ? 'col-7' : 'col-8'">
-                        <q-list separator padding class="fit">
-                            <q-item style="height: 40%;">
+                    <q-img basic :src="masterPhoto" loading="lazy" class="col-4" :alt="masterPhoto"/>
+                    <q-card-section class="q-pt-none">
+                        <q-list separator padding >
+                            <q-item >
                                 <q-item-section>
                                     <q-item-label class="text-h4 ">{{ $t("about.title") }}</q-item-label>
                                     <q-item-label caption class="text-body1 text-weight-medium text-white">{{
                                         $t('about.aboutme') }}</q-item-label>
                                 </q-item-section>
                             </q-item>
-                            <q-item class="justify-center items-center content-center" style="height: 15%;">
+                            <q-item class="about__list">
+                            <div class="about__item">
                                 <q-avatar size="100px">
-                                    <img :src="ciranova" loading="lazy">
+                                    <img :src="ciranova" loading="lazy" :alt="ciranova">
                                 </q-avatar>
                                 <q-avatar size="100px">
-                                    <img :src="bona" loading="lazy">
+                                    <img :src="bona" loading="lazy" :alt="bona">
                                 </q-avatar>
                                 <q-avatar size="100px">
-                                    <img :src="konig" loading="lazy">
+                                    <img :src="konig" loading="lazy" :alt="konig">
                                 </q-avatar>
-
-                                <img :src="berger" width="200" height="50" loading="lazy">
-
+                            </div>
+                            <div class="about__item">
+                                <img :src="berger" width="200" height="50" loading="lazy" :alt="berger">
+                            </div>
+                            <div class="about__item">
                                 <q-avatar size="100px">
-                                    <img :src="lagler" loading="lazy">
+                                    <img :src="lagler" loading="lazy" :alt="lagler">
                                 </q-avatar>
-                            </q-item>
-                            <q-item style="height: 25%;">
+                            </div>
+                        </q-item>
+                            <q-item >
                                 <q-item-section>
                                     <q-item-label class="text-h6 ">{{ $t('about.works_title')
                                     }}</q-item-label>
@@ -39,7 +43,7 @@
                                         $t('about.works') }}</q-item-label>
                                 </q-item-section>
                             </q-item>
-                            <q-item style="height: 20%;">
+                            <q-item >
                                 <q-item-section>
                                     <q-item-label class="text-h6 ">{{ $t('about.order_title')
                                     }}</q-item-label>
@@ -53,38 +57,38 @@
             </template>
 
             <template v-else>
-                <q-img basic :src="masterPhoto" loading="lazy" />
+                <q-img basic :src="masterPhoto" loading="lazy" :alt="masterPhoto" />
                 <q-card-section class="q-pt-none ">
-                    <q-list separator padding class="fit">
-                        <q-item style="height: 40%;">
+                    <q-list separator padding>
+                        <q-item>
                             <q-item-section>
                                 <q-item-label class="text-h4 ">{{ $t("about.title") }}</q-item-label>
                                 <q-item-label caption class="text-body1 text-weight-medium text-white">{{
                                     $t('about.aboutme') }}</q-item-label>
                             </q-item-section>
                         </q-item>
-                        <q-item style="height: 15%; display: block; text-align: center;">
-                            <div style="display: inline-block; vertical-align: middle;">
+                        <q-item class="about__list">
+                            <div class="about__item">
                                 <q-avatar size="100px">
-                                    <img :src="ciranova" loading="lazy">
+                                    <img :src="ciranova" loading="lazy" :alt="ciranova">
                                 </q-avatar>
                                 <q-avatar size="100px">
-                                    <img :src="bona" loading="lazy">
+                                    <img :src="bona" loading="lazy" :alt="bona">
                                 </q-avatar>
                                 <q-avatar size="100px">
-                                    <img :src="konig" loading="lazy">
+                                    <img :src="konig" loading="lazy" :alt="konig">
                                 </q-avatar>
                             </div>
-                            <div style="display: inline-block; vertical-align: middle;">
-                                <img :src="berger" width="200" height="50" loading="lazy">
+                            <div class="about__item">
+                                <img :src="berger" width="200" height="50" loading="lazy" :alt="berger">
                             </div>
-                            <div style="display: inline-block; vertical-align: middle;">
+                            <div class="about__item">
                                 <q-avatar size="100px">
-                                    <img :src="lagler" loading="lazy">
+                                    <img :src="lagler" loading="lazy" :alt="lagler">
                                 </q-avatar>
                             </div>
                         </q-item>
-                        <q-item style="height: 25%;">
+                        <q-item>
                             <q-item-section>
                                 <q-item-label class="text-h6 ">{{ $t('about.works_title')
                                 }}</q-item-label>
@@ -92,7 +96,7 @@
                                     $t('about.works') }}</q-item-label>
                             </q-item-section>
                         </q-item>
-                        <q-item style="height: 20%;">
+                        <q-item>
                             <q-item-section>
                                 <q-item-label class="text-h6 ">{{ $t('about.order_title')
                                 }}</q-item-label>
@@ -103,6 +107,7 @@
                     </q-list>
                 </q-card-section>
             </template>
+
         </q-card>
     </div>
 </template>
@@ -129,9 +134,3 @@ export default {
     }
 }
 </script>
-
-<style>
-.item-height {
-    height: 25%;
-}
-</style>

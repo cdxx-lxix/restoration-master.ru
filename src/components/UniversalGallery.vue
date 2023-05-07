@@ -24,7 +24,7 @@
         <template v-else> <!-- Mobiles -->
             <q-carousel v-model="slide" transition-prev="slide-right" transition-next="slide-left" swipeable animated
                 control-color="warning" navigation arrows class="bg-secondary shadow-1 full-width"
-                :height="$windowHeight + 'px'">
+                :height="($windowHeight * 0.85) + 'px'">
                 <template v-for="pair in imgPairs" :key="pair">
                     <q-carousel-slide :name="pair[0]" class="row full-width justify-around no-wrap" style="padding: 0px !important">
                         <q-img class="rounded-borders full-height IMAGE__highlight" :src="pair[1]" loading="lazy" :alt="pair[1]">
@@ -63,8 +63,8 @@ export default {
         return {
             slide: ref(1),
             imgPairs: {
-                restOne: [1, restOneA, restOneB],
-                restTwo: [3, restTwoA, restTwoB],
+                restTwo: [1, restTwoA, restTwoB],
+                restOne: [3, restOneB, restOneA],
                 scrpOne: [5, scrpOneA, scrpOneB],
                 scrpTwo: [7, scrpTwoA, scrpTwoB]
             }

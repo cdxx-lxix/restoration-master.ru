@@ -5,7 +5,7 @@
       <q-toolbar class="q-py-sm q-px-md">
 
         <!-- START: Logo and Name. Left side. -->
-        <q-btn round dense flat :ripple="{ center: true }"  class="q-mr-sm" no-caps><img :src="logo"></q-btn>
+        <q-btn round dense flat :ripple="{ center: true }"  class="q-mr-sm" no-caps><img :src="logo" :alt="logo"></q-btn>
         <q-toolbar-title>{{ $t("menu.title") }}</q-toolbar-title>
         <!-- END: Logo and Name. Left side. -->
 
@@ -49,7 +49,7 @@
               <!-- LOGO SECTION -->
               <q-item class="column items-center">
                 <q-avatar size="72px">
-                  <img :src="logo">
+                  <img :src="logo" :alt="logo">
                 </q-avatar>
               </q-item>
 
