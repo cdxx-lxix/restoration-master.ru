@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://restoration-master.ru/sitemap.xml

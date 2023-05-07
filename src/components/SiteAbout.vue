@@ -4,7 +4,7 @@
 
             <template v-if="$windowWidth >= 1080">
                 <q-card-section horizontal>
-                    <q-img basic :src="masterPhoto" class="col-4" :alt="masterPhoto"/>
+                    <q-img basic :src="masterPhoto" class="col-4" :alt="masterPhoto" loading="immediate"/>
                     <q-card-section class="q-pt-none">
                         <q-list separator padding >
                             <q-item >
@@ -17,13 +17,13 @@
                             <q-item class="about__list" role="none">
                                 <div class="about__item" role="none">
                                     <q-avatar size="100px">
-                                        <img :src="ciranova" loading="lazy" alt="ciranova">
+                                        <img :src="ciranova" loading="lazy" alt="ciranova" width="100" height="100">
                                     </q-avatar>
                                     <q-avatar size="100px">
-                                        <img :src="bona" loading="lazy" alt="bona">
+                                        <img :src="bona" loading="lazy" alt="bona" width="100" height="100">
                                     </q-avatar>
                                     <q-avatar size="100px">
-                                        <img :src="konig" loading="lazy" alt="konig">
+                                        <img :src="konig" loading="lazy" alt="konig" width="100" height="100">
                                     </q-avatar>
                                 </div>
                                 <div class="about__item">
@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="about__item">
                                     <q-avatar size="100px">
-                                        <img :src="lagler" loading="lazy" alt="lagler">
+                                        <img :src="lagler" loading="lazy" alt="lagler" width="100" height="100">
                                     </q-avatar>
                                 </div>
                             </q-item>
@@ -57,7 +57,7 @@
             </template>
 
             <template v-else>
-                <q-img basic :src="masterPhoto" :alt="masterPhoto" />
+                <q-img basic :src="masterPhoto" :alt="masterPhoto" loading="immediate"/>
                 <q-card-section class="q-pt-none ">
                     <q-list separator padding>
                         <q-item>
@@ -70,13 +70,13 @@
                         <q-item class="about__list">
                             <div class="about__item">
                                 <q-avatar size="100px">
-                                    <img :src="ciranova" loading="lazy" alt="ciranova">
+                                    <img :src="ciranova" loading="lazy" alt="ciranova" width="100" height="100">
                                 </q-avatar>
                                 <q-avatar size="100px">
-                                    <img :src="bona" loading="lazy" alt="bona">
+                                    <img :src="bona" loading="lazy" alt="bona" width="100" height="100">
                                 </q-avatar>
                                 <q-avatar size="100px">
-                                    <img :src="konig" loading="lazy" alt="konig">
+                                    <img :src="konig" loading="lazy" alt="konig" width="100" height="100">
                                 </q-avatar>
                             </div>
                             <div class="about__item">
@@ -84,7 +84,7 @@
                             </div>
                             <div class="about__item">
                                 <q-avatar size="100px">
-                                    <img :src="lagler" loading="lazy" alt="lagler">
+                                    <img :src="lagler" loading="lazy" alt="lagler" width="100" height="100">
                                 </q-avatar>
                             </div>
                         </q-item>
