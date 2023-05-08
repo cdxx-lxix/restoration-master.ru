@@ -1,5 +1,5 @@
 <template>
-    <q-btn dense flat no-wrap>
+    <q-btn dense flat no-wrap v-show="$windowWidth >= 1080">
       <a class="GL__toolbar-link text-white text-body2 text-weight-bold" :href="'tel:'+this.$phoneNumber">{{ this.$phoneNumber }}</a>
       <q-tooltip>{{ $t("tooltips.phone") }}</q-tooltip>
     </q-btn>

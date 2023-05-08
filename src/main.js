@@ -22,9 +22,6 @@ const UniversalGallery = () => import(
 const SiteAdvantages  = () => import(
     /* webpackChunkName: "SiteAdvantages" */ './components/SiteAdvantages.vue'
 );
-const AdvantagesTable = () => import(
-    /* webpackChunkName: "AdvantagesTable" */ './components/AdvantagesTable.vue'
-);
 const SiteYoutube = () => import(
     /* webpackChunkName: "SiteYoutube" */ './components/SiteYoutube.vue'
 );
@@ -42,7 +39,6 @@ const app = createApp(App, {
       SiteAbout,
       UniversalGallery,
       SiteAdvantages,
-      AdvantagesTable,
       SiteYoutube,
       SiteContacts,
       SiteFooter

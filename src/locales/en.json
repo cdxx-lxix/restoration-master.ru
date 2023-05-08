@@ -1,28 +1,28 @@
 {
   "menu": {
     "start": "About Us",
-    "restorations": "Gallery",
-    "scrapings": "Our Channel",
+    "gallery": "Gallery",
+    "channel": "Our Channel",
     "contacts": "Contacts",
-    "language": "Change to:⠀",
     "title": "Restoration Master",
-    "callme": "Call",
-    "compare": "Compare",
+    "callme": "Call us",
     "developer": "Contact Developer"
   },
   "about": {
-    "title": "Restoration Masters",
+    "title": "Restoration Master",
     "aboutme": "For over 4 years, we have been professionally engaged in the restoration of parquet and wooden decor elements in Moscow and the Moscow region. Services and restoration deadlines are discussed after viewing the object. Only professional chemistry is used during work: Ciranova, Bona, Konig, Berger. German equipment Lagler: Hummel, Trio, Flip.",
     "works_title": "Work Conditions",
-    "works": "Free visit to Moscow for consultation and preliminary inspection of the object. 500 rubles for Moscow region. Services and restoration deadlines are discussed after viewing the object.",
+    "works": "Free visit for Moscow for consultation and preliminary inspection of the site. 500 rubles for Moscow region. Services and restoration deadlines are discussed after viewing the object.",
     "order_title": "Order Conditions",
-    "order": "To carry out sanding work, you pay for the materials, after which they are brought to the object. The minimum order is 15 meters."
+    "order": "To carry out sanding work, you need to pay for the materials, after which they are brought to the site. The minimum order is 15 meters."
   },
   "advantages": {
     "card1_1": "Parquet Restoration",
     "card1_2": "With local defects of the floor, it is possible to carry out parquet restoration. During parquet restoration, it is possible to replace a board, remove chips, cracks, dents, and stains. Applying a protective coating helps to extend the service life of the parquet.",
     "card2_1": "Parquet Sanding",
-    "card2_2": "To create a beautiful floor pattern, we carry out work on parquet. They include parquet sanding. Filling chips, cracks, and deep scratches. In some cases, replacing boards. After which, the parquet is covered with oil or varnish."
+    "card2_2": "To create a beautiful floor pattern, we carry out work on parquet. They include parquet sanding. Filling chips, cracks, and deep scratches. In some cases, replacing boards. After which, the parquet is covered with oil or varnish.",
+    "scrTitle": "Work process",
+    "scrInfo": "Before the work starts, the walls of the room, doors, windows, built-in furniture, and air conditioners are covered with protective film and duct tape. Sanding of the floor covering is done with the Lagler Hummel belt machine. Then the Lagler Trio machine performs fine sanding, from coarse-grained to fine-grained abrasives: P40 P60 P80 P100. Also, the perimeter of the room is sanded with the Lagler Flip flat sander and the Makita vibration sander. Our equipment is equipped with dust extraction systems. Before each stage of work, the dust is cleaned with a vacuum cleaner, the room is ventilated, and the debris is disposed of at the end of each working day. Before painting, the protective film is removed and the door frames, doors, and floor tiles are taped with tape to prevent the chemicals used in tinting from getting on them."
   },
   "gallery": {
     "before": "Before",
