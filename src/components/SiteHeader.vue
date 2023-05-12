@@ -4,7 +4,7 @@
     <q-header elevated class="text-white bg-primary" height-hint="61.59" id="header">
       <q-toolbar class="q-py-sm q-px-md">
 
-        <q-btn round dense flat :ripple="{ center: true }" aria-label="Site logo" class="q-mr-sm" no-caps><img :src="logo" :alt="logo"></q-btn>
+        <q-btn round dense flat :ripple="{ center: true }" aria-label="Site logo" class="q-mr-sm" no-caps><img :src="logo" :alt="logo" width="45" height="45"></q-btn>
         <q-toolbar-title>{{ $t("menu.title") }}</q-toolbar-title>
 
         <div class="GL__toolbar-link q-ml-xs q-gutter-md text-body2 text-weight-bold row items-center no-wrap">
@@ -33,7 +33,7 @@
               <!-- LOGO SECTION -->
               <q-item class="column items-center">
                 <q-avatar size="72px">
-                  <img :src="logo" :alt="logo">
+                  <img :src="logo" :alt="logo" width="72" height="72">
                 </q-avatar>
               </q-item>
 
