@@ -14,7 +14,7 @@
                     <q-item clickable v-for="option in contactOptions" :key="option" :href="option.link" :style="'height:' + 100 / Object.keys(contactOptions).length + '%'" role="none">
                         <q-item-section avatar>
                             <q-avatar size="50px">
-                                <img :src="option.icon" :alt="option.title">
+                                <img :src="option.icon" :alt="option.title" width="35" height="35">
                             </q-avatar>
                         </q-item-section>
 
